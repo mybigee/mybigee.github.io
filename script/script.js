@@ -10,6 +10,7 @@ window.onload = ()=>{
     document.head.appendChild(link)
 
     //底部分割线
+    let br = document.createElement("br")
     let line = document.createElement("hr")
     line.style.backgroundColor = "rgba(255,255,255,0.5)"
     line.style.height = "2px"
@@ -24,6 +25,7 @@ window.onload = ()=>{
 
     //追加到typora自己生成的div后
     let typoradiv = document.getElementById("write")
+    typoradiv.appendChild(br)
     typoradiv.appendChild(line)
     typoradiv.appendChild(right)
 }

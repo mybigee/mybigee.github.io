@@ -1,0 +1,1471 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<script src="https://note.ilulj.top/script/script.js"></script>
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+
+</style><title>003_Introduction to scRNA-seq integration（scRNA-seq整合）</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='单细胞转录组测序数据分析'><span>单细胞转录组测序数据分析</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#单细胞转录组测序数据分析">单细胞转录组测序数据分析</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" href="#introduction-to-scrna-seq-integrationscrna-seq整合）">Introduction to scRNA-seq integration（scRNA-seq整合）</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4"><a class="md-toc-inner" href="#简介">简介</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n14"><a class="md-toc-inner" href="#集成的目标">集成的目标</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n24"><a class="md-toc-inner" href="#创建seurat对象">创建Seurat对象</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n35"><a class="md-toc-inner" href="#进行集成">进行集成</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n46"><a class="md-toc-inner" href="#进行集成分析">进行集成分析</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n56"><a class="md-toc-inner" href="#确定保守的细胞类型marker">确定保守的细胞类型marker</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n73"><a class="md-toc-inner" href="#鉴定不同条件下的差异表达基因">鉴定不同条件下的差异表达基因</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n86"><a class="md-toc-inner" href="#差异表达分析">差异表达分析</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n103"><a class="md-toc-inner" href="#使用sctransform进行数据集标准化的集成">使用SCTransform进行数据集标准化的集成</a></span></p></div><h2 id='introduction-to-scrna-seq-integrationscrna-seq整合）'><span>Introduction to scRNA-seq integration（scRNA-seq整合）</span></h2><h3 id='简介'><span>简介</span></h3><ul><li><span>联合分析两个或多个单细胞数据集存在一定的挑战，特别是在跨不同的数据集中识别细胞类群可能存在问题。</span></li><li><span>Seurat v4包含一系列的方法去匹配跨数据集共享细胞类群。</span></li><li><span>方法首先识别处于匹配生物学状态（锚点）的跨数据集的配对细胞，既可以用于校正不同数据集之间的技术差异（批次效应），也可以跨实验条件的scRNA-seq比较分析。</span></li><li><span>以对处于静止或干扰素刺激状态的人免疫细胞（PBMC）进行比较分析。</span></li></ul><h3 id='集成的目标'><span>集成的目标</span></h3><ul><li><span>创建一个整合的数据集（assay）为下游的分析</span></li><li><span>识别两个数据集中存在的细胞类型</span></li><li><span>获得在刺激和控制组中都保守的细胞类型marker</span></li><li><span>比较数据集找到细胞类型对刺激的特异性反应</span></li></ul><h3 id='创建seurat对象'><span>创建Seurat对象</span></h3><ul><li><span>使用SeuratData包下载数据（太慢了，单独下载，再手动安装），</span><a href='https://seurat.nygenome.org/src/contrib/ifnb.SeuratData_3.1.0.tar.gz'><span>数据下载</span></a><span> </span></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">library</span>(<span class="cm-variable">Seurat</span>)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">library</span>(<span class="cm-variable">SeuratData</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">library</span>(<span class="cm-variable">patchwork</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 78px;"></div><div class="CodeMirror-gutters" style="display: none; height: 78px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 下载数据集</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># InstallData("ifnb")</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 加载数据集</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">ifnb</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">LoadData</span>(<span class="cm-string">"ifnb"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">head</span>(<span class="cm-variable">ifnb</span>@<span class="cm-variable">meta.data</span>,<span class="cm-number">3</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 130px;"></div><div class="CodeMirror-gutters" style="display: none; height: 130px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">orig.ident</span> <span class="cm-variable">nCount_RNA</span> <span class="cm-variable">nFeature_RNA</span> <span class="cm-variable">stim</span> <span class="cm-variable">seurat_annotations</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">AAACATACATTTCC.1</span> <span class="cm-variable">IMMUNE_CTRL</span> &nbsp; &nbsp; &nbsp; <span class="cm-number">3017</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">877</span> <span class="cm-variable">CTRL</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">CD14</span> <span class="cm-variable">Mono</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">AAACATACCAGAAA.1</span> <span class="cm-variable">IMMUNE_CTRL</span> &nbsp; &nbsp; &nbsp; <span class="cm-number">2481</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">713</span> <span class="cm-variable">CTRL</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">CD14</span> <span class="cm-variable">Mono</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">AAACATACCTCGCT.1</span> <span class="cm-variable">IMMUNE_CTRL</span> &nbsp; &nbsp; &nbsp; <span class="cm-number">3420</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">850</span> <span class="cm-variable">CTRL</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">CD14</span> <span class="cm-variable">Mono</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 104px;"></div><div class="CodeMirror-gutters" style="display: none; height: 104px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 将数据集划分为两个seurat对象的一个list（stim和CTRL）</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 依据stim列分割</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">ifnb.list</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">SplitObject</span>(<span class="cm-variable">ifnb</span>,<span class="cm-variable">split.by</span> <span class="cm-operator">=</span> <span class="cm-string">"stim"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">names</span>(<span class="cm-variable">ifnb.list</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 104px;"></div><div class="CodeMirror-gutters" style="display: none; height: 104px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-number">1</span>] <span class="cm-string">"CTRL"</span> <span class="cm-string">"STIM"</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 为每个数据集单独的标注化和识别可变的feature</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">ifnb.list</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">lapply</span>(<span class="cm-variable">X</span> <span class="cm-operator">=</span> <span class="cm-variable">ifnb.list</span>,<span class="cm-variable">FUN</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span>(<span class="cm-variable">x</span>){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-variable">x</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">NormalizeData</span>(<span class="cm-variable">x</span>) <span class="cm-comment"># 标准化</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-comment"># # 根据基因的方差稳定性VST，来选择具有最高变异性的基因</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-variable">x</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">FindVariableFeatures</span>(<span class="cm-variable">x</span>, <span class="cm-variable">selection.method</span> <span class="cm-operator">=</span> <span class="cm-string">"vst"</span>, <span class="cm-variable">nfeatures</span> <span class="cm-operator">=</span> <span class="cm-number">2000</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">})</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 选择跨不同数据集重复可变的feature（基因）</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">features</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">SelectIntegrationFeatures</span>(<span class="cm-variable">object.list</span> <span class="cm-operator">=</span> <span class="cm-variable">ifnb.list</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">length</span>(<span class="cm-variable">features</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 260px;"></div><div class="CodeMirror-gutters" style="display: none; height: 260px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-number">1</span>] <span class="cm-number">2000</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><h3 id='进行集成'><span>进行集成</span></h3><ul><li><span>使用</span><strong><span>FindIntegrationAnchors()</span></strong><span>发现锚点，使用</span><strong><span>IntegrateData()</span></strong><span>利用找出大锚点，将两个数据集集成在一起。</span></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 进行集成</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.anchors</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">FindIntegrationAnchors</span>(<span class="cm-variable">object.list</span> <span class="cm-operator">=</span> <span class="cm-variable">ifnb.list</span>, <span class="cm-variable">anchor.features</span> <span class="cm-operator">=</span> <span class="cm-variable">features</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">slotNames</span>(<span class="cm-variable">immune.anchors</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 锚点</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">head</span>(<span class="cm-variable">immune.anchors</span>@<span class="cm-variable">anchors</span>,<span class="cm-number">3</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 130px;"></div><div class="CodeMirror-gutters" style="display: none; height: 130px;"></div></div></div></pre><ul><li><span>object.list即前面的ifnb.list，anchor.features即前面的features</span></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-number">1</span>] <span class="cm-string">"object.list"</span> &nbsp; &nbsp; &nbsp; <span class="cm-string">"reference.cells"</span> &nbsp; <span class="cm-string">"reference.objects"</span> <span class="cm-string">"query.cells"</span> &nbsp; &nbsp; &nbsp; <span class="cm-string">"anchors"</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-number">6</span>] <span class="cm-string">"offsets"</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-string">"anchor.features"</span> &nbsp; <span class="cm-string">"neighbors"</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-string">"command"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-variable">cell1</span> <span class="cm-variable">cell2</span> &nbsp; &nbsp; <span class="cm-variable">score</span> <span class="cm-variable">dataset1</span> <span class="cm-variable">dataset2</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">1</span> &nbsp; &nbsp; <span class="cm-number">1</span> &nbsp;<span class="cm-number">2863</span> <span class="cm-number">0.6000000</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">1</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">2</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">2</span> &nbsp; &nbsp; <span class="cm-number">1</span> &nbsp;<span class="cm-number">1301</span> <span class="cm-number">0.3428571</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">1</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">2</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">3</span> &nbsp; &nbsp; <span class="cm-number">2</span> &nbsp;<span class="cm-number">6920</span> <span class="cm-number">0.8000000</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">1</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">2</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 156px;"></div><div class="CodeMirror-gutters" style="display: none; height: 156px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 创建集成的数据集</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">IntegrateData</span>(<span class="cm-variable">anchorset</span> <span class="cm-operator">=</span> <span class="cm-variable">immune.anchors</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">names</span>(<span class="cm-variable">immune.combined</span>@<span class="cm-variable">assays</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 78px;"></div><div class="CodeMirror-gutters" style="display: none; height: 78px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-number">1</span>] <span class="cm-string">"RNA"</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"integrated"</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><h3 id='进行集成分析'><span>进行集成分析</span></h3><ul><li><span>使用集成校正后的数据集进行分析。</span></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 集成校正后的数据集存储在integrated中，而原始数据存储在RNA中</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 将默认的assay设置为integrated</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">DefaultAssay</span>(<span class="cm-variable">immune.combined</span>) <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-string">"integrated"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 进行可视化和聚类</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">ScaleData</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">verbose</span> <span class="cm-operator">=</span> <span class="cm-variable">FALSE</span>) <span class="cm-comment"># 归一化</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">RunPCA</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">npcs</span> <span class="cm-operator">=</span> <span class="cm-number">30</span>, <span class="cm-variable">verbose</span> <span class="cm-operator">=</span> <span class="cm-variable">FALSE</span>) <span class="cm-comment"># PCA线性降维</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 查看前几个主成分</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined</span>@<span class="cm-variable">reductions</span><span class="cm-operator cm-dollar">$</span><span class="cm-variable">pca</span>@<span class="cm-variable">cell.embeddings</span>[<span class="cm-number">1</span><span class="cm-operator">:</span><span class="cm-number">4</span>,<span class="cm-number">1</span><span class="cm-operator">:</span><span class="cm-number">4</span>]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">RunUMAP</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">reduction</span> <span class="cm-operator">=</span> <span class="cm-string">"pca"</span>, <span class="cm-variable">dims</span> <span class="cm-operator">=</span> <span class="cm-number">1</span><span class="cm-operator">:</span><span class="cm-number">30</span>) <span class="cm-comment"># UMAP非线性降维</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined</span>@<span class="cm-variable">reductions</span><span class="cm-operator cm-dollar">$</span><span class="cm-variable">umap</span>@<span class="cm-variable">cell.embeddings</span>[<span class="cm-number">1</span><span class="cm-operator">:</span><span class="cm-number">4</span>,]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">FindNeighbors</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">reduction</span> <span class="cm-operator">=</span> <span class="cm-string">"pca"</span>, <span class="cm-variable">dims</span> <span class="cm-operator">=</span> <span class="cm-number">1</span><span class="cm-operator">:</span><span class="cm-number">30</span>) <span class="cm-comment"># 找出邻居节点</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># resolution为分辨率，分辨率越高，得到的细胞群越多，但也会增加结果的噪声和冗余</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">FindClusters</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">resolution</span> <span class="cm-operator">=</span> <span class="cm-number">0.5</span>) </span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 364px;"></div><div class="CodeMirror-gutters" style="display: none; height: 364px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">PC_1</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">PC_2</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">PC_3</span> &nbsp; &nbsp; &nbsp;<span class="cm-variable">PC_4</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">AAACATACATTTCC.1</span> <span class="cm-number">12.341146</span> &nbsp;<span class="cm-operator">-</span><span class="cm-number">1.2817563</span> <span class="cm-operator">-</span><span class="cm-number">0.07874843</span> <span class="cm-number">0.1737105</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">AAACATACCAGAAA.1</span> <span class="cm-number">13.151368</span> &nbsp; <span class="cm-number">1.8076015</span> <span class="cm-operator">-</span><span class="cm-number">1.66686376</span> <span class="cm-number">0.4576478</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">AAACATACCTCGCT.1</span> <span class="cm-number">12.159500</span> &nbsp; <span class="cm-number">0.3105415</span> <span class="cm-operator">-</span><span class="cm-number">1.37982504</span> <span class="cm-number">0.1797012</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">AAACATACCTGGTA.1</span> <span class="cm-operator">-</span><span class="cm-number">0.992216</span> <span class="cm-operator">-</span><span class="cm-number">14.9676190</span> &nbsp;<span class="cm-number">4.71096798</span> <span class="cm-number">7.3110193</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">UMAP_1</span> &nbsp; &nbsp; &nbsp;<span class="cm-variable">UMAP_2</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">AAACATACATTTCC.1</span> <span class="cm-operator">-</span><span class="cm-number">6.719218</span> &nbsp;<span class="cm-operator">-</span><span class="cm-number">2.4081349</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">AAACATACCAGAAA.1</span> <span class="cm-operator">-</span><span class="cm-number">5.735807</span> &nbsp; <span class="cm-number">0.5809233</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">AAACATACCTCGCT.1</span> <span class="cm-operator">-</span><span class="cm-number">7.304657</span> &nbsp;<span class="cm-operator">-</span><span class="cm-number">2.5758111</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">AAACATACCTGGTA.1</span> <span class="cm-operator">-</span><span class="cm-number">6.215795</span> <span class="cm-operator">-</span><span class="cm-number">12.0481019</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 260px;"></div><div class="CodeMirror-gutters" style="display: none; height: 260px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded md-focus" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap CodeMirror-focused" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 114.992px; left: 59.4531px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 可视化</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 使用stim列进行分类</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">p1</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">DimPlot</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">reduction</span> <span class="cm-operator">=</span> <span class="cm-string">"umap"</span>, <span class="cm-variable">group.by</span> <span class="cm-operator">=</span> <span class="cm-string">"stim"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">p2</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">DimPlot</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">reduction</span> <span class="cm-operator">=</span> <span class="cm-string">"umap"</span>, <span class="cm-variable">label</span> <span class="cm-operator">=</span> <span class="cm-variable">TRUE</span>, <span class="cm-variable">repel</span> <span class="cm-operator">=</span> <span class="cm-variable">TRUE</span>)</span></pre><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">p1</span> <span class="cm-operator">+</span> <span class="cm-variable">p2</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 130px;"></div><div class="CodeMirror-gutters" style="display: none; height: 130px;"></div></div></div></pre><p><img src="../img\014_单细胞转录组测序数据分析\003_Introduction to scRNA-seq integration（scRNA-seq整合）\001.png" alt="001" style="zoom:67%;" /></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 并列显示两个组的聚类情况</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">DimPlot</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">reduction</span> <span class="cm-operator">=</span> <span class="cm-string">"umap"</span>, <span class="cm-variable">split.by</span> <span class="cm-operator">=</span> <span class="cm-string">"stim"</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 52px;"></div><div class="CodeMirror-gutters" style="display: none; height: 52px;"></div></div></div></pre><p><img src="../img\014_单细胞转录组测序数据分析\003_Introduction to scRNA-seq integration（scRNA-seq整合）\002.png" alt="002" style="zoom: 67%;" /></p><h3 id='确定保守的细胞类型marker'><span>确定保守的细胞类型marker</span></h3><ul><li><span>使用</span><strong><span>FindConservedMarkers()</span></strong><span>鉴定不同条件下保守的细胞类型标记基因。为每个数据集/组进行差异基因表达的检验和使用mate分析的方法组合P值。</span></li><li><span>例如，我们可以计算保守的标记基因，而忽略刺激的条件，在聚类6中。</span></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 进行差异表达的分析，切换为RNA原始数据</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">DefaultAssay</span>(<span class="cm-variable">immune.combined</span>) <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-string">"RNA"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">nk.markers</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">FindConservedMarkers</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">ident.1</span> <span class="cm-operator">=</span> <span class="cm-number">6</span>, <span class="cm-variable">grouping.var</span> <span class="cm-operator">=</span> <span class="cm-string">"stim"</span>, <span class="cm-variable">verbose</span> <span class="cm-operator">=</span> <span class="cm-variable">FALSE</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">head</span>(<span class="cm-variable">nk.markers</span>,<span class="cm-number">3</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 130px;"></div><div class="CodeMirror-gutters" style="display: none; height: 130px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; <span class="cm-variable">CTRL_p_val</span> <span class="cm-variable">CTRL_avg_log2FC</span> <span class="cm-variable">CTRL_pct.1</span> <span class="cm-variable">CTRL_pct.2</span> <span class="cm-variable">CTRL_p_val_adj</span> &nbsp; &nbsp;<span class="cm-variable">STIM_p_val</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">GNLY</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">0</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">6.006173</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.944</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.045</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">0</span> &nbsp;<span class="cm-number">0.000000e+00</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">FGFBP2</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">0</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">3.243588</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.505</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.020</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">0</span> <span class="cm-number">1.603755e-161</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">CLIC3</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-number">0</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">3.461957</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.597</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.024</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">0</span> &nbsp;<span class="cm-number">0.000000e+00</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; <span class="cm-variable">STIM_avg_log2FC</span> <span class="cm-variable">STIM_pct.1</span> <span class="cm-variable">STIM_pct.2</span> <span class="cm-variable">STIM_p_val_adj</span> &nbsp; &nbsp; &nbsp;<span class="cm-variable">max_pval</span> <span class="cm-variable">minimump_p_val</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">GNLY</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">5.863176</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.957</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.059</span> &nbsp; <span class="cm-number">0.000000e+00</span> &nbsp;<span class="cm-number">0.000000e+00</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">FGFBP2</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">2.183999</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.258</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.015</span> &nbsp;<span class="cm-number">2.253757e-157</span> <span class="cm-number">1.603755e-161</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">CLIC3</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-number">3.535807</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.622</span> &nbsp; &nbsp; &nbsp;<span class="cm-number">0.031</span> &nbsp; <span class="cm-number">0.000000e+00</span> &nbsp;<span class="cm-number">0.000000e+00</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-number">0</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 208px;"></div><div class="CodeMirror-gutters" style="display: none; height: 208px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 找出每个细胞聚类的标记基因，并使用这些标记基因去注释细胞群，指定为特定的细胞类型</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">FeaturePlot</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">features</span> <span class="cm-operator">=</span> <span class="cm-variable">c</span>(<span class="cm-string">"CD3D"</span>, <span class="cm-string">"SELL"</span>, <span class="cm-string">"CREM"</span>, <span class="cm-string">"CD8A"</span>, <span class="cm-string">"GNLY"</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-string">"CD79A"</span>, <span class="cm-string">"FCGR3A"</span>,<span class="cm-string">"CCL2"</span>, <span class="cm-string">"PPBP"</span>), <span class="cm-variable">min.cutoff</span> <span class="cm-operator">=</span> <span class="cm-string">"q9"</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 78px;"></div><div class="CodeMirror-gutters" style="display: none; height: 78px;"></div></div></div></pre><p><img src="../img\014_单细胞转录组测序数据分析\003_Introduction to scRNA-seq integration（scRNA-seq整合）\003.png" alt="003" style="zoom: 67%;" /></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 进行细胞类型注释</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">RenameIdents</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable-3">`0`</span> <span class="cm-operator">=</span> <span class="cm-string">"CD14 Mono"</span>, <span class="cm-variable-3">`1`</span> <span class="cm-operator">=</span> <span class="cm-string">"CD4 Naive T"</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; <span class="cm-variable-3">`2`</span> <span class="cm-operator">=</span> <span class="cm-string">"CD4 Memory T"</span>, <span class="cm-variable-3">`3`</span> <span class="cm-operator">=</span> <span class="cm-string">"CD16 Mono"</span>, <span class="cm-variable-3">`4`</span> <span class="cm-operator">=</span> <span class="cm-string">"B"</span>, <span class="cm-variable-3">`5`</span> <span class="cm-operator">=</span> <span class="cm-string">"CD8 T"</span>, <span class="cm-variable-3">`6`</span> <span class="cm-operator">=</span> <span class="cm-string">"NK"</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; <span class="cm-variable-3">`7`</span> <span class="cm-operator">=</span> <span class="cm-string">"T activated"</span>, <span class="cm-variable-3">`8`</span> <span class="cm-operator">=</span> <span class="cm-string">"DC"</span>, <span class="cm-variable-3">`9`</span> <span class="cm-operator">=</span> <span class="cm-string">"B Activated"</span>,<span class="cm-variable-3">`10`</span> <span class="cm-operator">=</span> <span class="cm-string">"Mk"</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; <span class="cm-variable-3">`11`</span> <span class="cm-operator">=</span> <span class="cm-string">"pDC"</span>, <span class="cm-variable-3">`12`</span> <span class="cm-operator">=</span> <span class="cm-string">"Eryth"</span>, <span class="cm-variable-3">`13`</span> <span class="cm-operator">=</span> <span class="cm-string">"Mono/Mk Doublets"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">DimPlot</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">label</span> <span class="cm-operator">=</span> <span class="cm-variable">TRUE</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 156px;"></div><div class="CodeMirror-gutters" style="display: none; height: 156px;"></div></div></div></pre><p><img src="../img\014_单细胞转录组测序数据分析\003_Introduction to scRNA-seq integration（scRNA-seq整合）\004.png" alt="004" style="zoom:67%;" /></p><ul><li><strong><span>DotPlot()</span></strong><span>函数使用</span><strong><span>split.by</span></strong><span>参数查看在不同条件下保守的细胞类型marker。在被给定的基因在一个细胞聚类的表达，展示出表达水平和细胞百分比。</span></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 对不同细胞类型进行排序</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Idents</span>(<span class="cm-variable">immune.combined</span>) <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">factor</span>(<span class="cm-variable">Idents</span>(<span class="cm-variable">immune.combined</span>), <span class="cm-variable">levels</span> <span class="cm-operator">=</span> <span class="cm-variable">c</span>( </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; <span class="cm-string">"Mono/Mk Doublets"</span>, <span class="cm-string">"pDC"</span>, <span class="cm-string">"Eryth"</span>, <span class="cm-string">"Mk"</span>, <span class="cm-string">"DC"</span>, <span class="cm-string">"CD14 Mono"</span>, <span class="cm-string">"CD16 Mono"</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; <span class="cm-string">"B Activated"</span>, <span class="cm-string">"B"</span>, <span class="cm-string">"CD8 T"</span>, <span class="cm-string">"NK"</span>, <span class="cm-string">"T activated"</span>, <span class="cm-string">"CD4 Naive T"</span>, <span class="cm-string">"CD4 Memory T"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 要绘制的marker</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">markers.to.plot</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">c</span>(<span class="cm-string">"CD3D"</span>, <span class="cm-string">"CREM"</span>, <span class="cm-string">"HSPH1"</span>, <span class="cm-string">"SELL"</span>, <span class="cm-string">"GIMAP5"</span>, <span class="cm-string">"CACYBP"</span>, <span class="cm-string">"GNLY"</span>, <span class="cm-string">"NKG7"</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-string">"CCL5"</span>, <span class="cm-string">"CD8A"</span>, <span class="cm-string">"MS4A1"</span>, <span class="cm-string">"CD79A"</span>, <span class="cm-string">"MIR155HG"</span>, <span class="cm-string">"NME1"</span>, <span class="cm-string">"FCGR3A"</span>, <span class="cm-string">"VMO1"</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-string">"CCL2"</span>, <span class="cm-string">"S100A9"</span>, <span class="cm-string">"HLA-DQA1"</span>, <span class="cm-string">"GPR183"</span>, <span class="cm-string">"PPBP"</span>, <span class="cm-string">"GNG11"</span>, <span class="cm-string">"HBA2"</span>, <span class="cm-string">"HBB"</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-string">"TSPAN13"</span>, <span class="cm-string">"IL3RA"</span>, <span class="cm-string">"IGJ"</span>, <span class="cm-string">"PRSS57"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">DotPlot</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">features</span> <span class="cm-operator">=</span> <span class="cm-variable">markers.to.plot</span>, <span class="cm-variable">cols</span> <span class="cm-operator">=</span> <span class="cm-variable">c</span>(<span class="cm-string">"blue"</span>, <span class="cm-string">"red"</span>), </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">dot.scale</span> <span class="cm-operator">=</span> <span class="cm-number">8</span>, <span class="cm-variable">split.by</span> <span class="cm-operator">=</span> <span class="cm-string">"stim"</span>) <span class="cm-operator">+</span> <span class="cm-variable">RotatedAxis</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 不同颜色代表不同的处理条件</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 312px;"></div><div class="CodeMirror-gutters" style="display: none; height: 312px;"></div></div></div></pre><p><img src="../img\014_单细胞转录组测序数据分析\003_Introduction to scRNA-seq integration（scRNA-seq整合）\005.png" alt="005" style="zoom: 50%;" /></p><h4 id='鉴定不同条件下的差异表达基因'><span>鉴定不同条件下的差异表达基因</span></h4><ul><li><span>到目前为止，已经对其了刺激和对照细胞，可以开始进行比较分析和查看由刺激引起的差异。</span></li><li><span>其中的一个方法是绘制刺激组和对照组细胞的平均表达图，同时在散点图上寻找视觉异常值的基因。</span></li><li><span>此处绘制了，刺激和对照组的naive T 细胞和CD14 monocyte细胞群的散点图，同时标出由于刺激引起的剧烈的不同。</span></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">library</span>(<span class="cm-variable">ggplot2</span>)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">library</span>(<span class="cm-variable">cowplot</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">theme_set</span>(<span class="cm-variable">theme_cowplot</span>())</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">t.cells</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">subset</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">idents</span> <span class="cm-operator">=</span> <span class="cm-string">"CD4 Naive T"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Idents</span>(<span class="cm-variable">t.cells</span>) <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-string">"stim"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 计算每个细胞的平均表达量，同时进行ln(X+1)对数变换</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">avg.t.cells</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">as.data.frame</span>(<span class="cm-variable">log1p</span>(<span class="cm-variable">AverageExpression</span>(<span class="cm-variable">t.cells</span>, <span class="cm-variable">verbose</span> <span class="cm-operator">=</span> <span class="cm-variable">FALSE</span>)<span class="cm-operator cm-dollar">$</span><span class="cm-variable">RNA</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">avg.t.cells</span><span class="cm-operator cm-dollar">$</span><span class="cm-variable">gene</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">rownames</span>(<span class="cm-variable">avg.t.cells</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cd14.mono</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">subset</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">idents</span> <span class="cm-operator">=</span> <span class="cm-string">"CD14 Mono"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Idents</span>(<span class="cm-variable">cd14.mono</span>) <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-string">"stim"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">avg.cd14.mono</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">as.data.frame</span>(<span class="cm-variable">log1p</span>(<span class="cm-variable">AverageExpression</span>(<span class="cm-variable">cd14.mono</span>, <span class="cm-variable">verbose</span> <span class="cm-operator">=</span> <span class="cm-variable">FALSE</span>)<span class="cm-operator cm-dollar">$</span><span class="cm-variable">RNA</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">avg.cd14.mono</span><span class="cm-operator cm-dollar">$</span><span class="cm-variable">gene</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">rownames</span>(<span class="cm-variable">avg.cd14.mono</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">genes.to.label</span> <span class="cm-operator">=</span> <span class="cm-variable">c</span>(<span class="cm-string">"ISG15"</span>, <span class="cm-string">"LY6E"</span>, <span class="cm-string">"IFI6"</span>, <span class="cm-string">"ISG20"</span>, <span class="cm-string">"MX1"</span>, <span class="cm-string">"IFIT2"</span>, <span class="cm-string">"IFIT1"</span>, <span class="cm-string">"CXCL10"</span>, <span class="cm-string">"CCL8"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">p1</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">ggplot</span>(<span class="cm-variable">avg.t.cells</span>, <span class="cm-variable">aes</span>(<span class="cm-variable">CTRL</span>, <span class="cm-variable">STIM</span>)) <span class="cm-operator">+</span> <span class="cm-variable">geom_point</span>() <span class="cm-operator">+</span> <span class="cm-variable">ggtitle</span>(<span class="cm-string">"CD4 Naive T Cells"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">p1</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">LabelPoints</span>(<span class="cm-variable">plot</span> <span class="cm-operator">=</span> <span class="cm-variable">p1</span>, <span class="cm-variable">points</span> <span class="cm-operator">=</span> <span class="cm-variable">genes.to.label</span>, <span class="cm-variable">repel</span> <span class="cm-operator">=</span> <span class="cm-variable">TRUE</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">p2</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">ggplot</span>(<span class="cm-variable">avg.cd14.mono</span>, <span class="cm-variable">aes</span>(<span class="cm-variable">CTRL</span>, <span class="cm-variable">STIM</span>)) <span class="cm-operator">+</span> <span class="cm-variable">geom_point</span>() <span class="cm-operator">+</span> <span class="cm-variable">ggtitle</span>(<span class="cm-string">"CD14 Monocytes"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">p2</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">LabelPoints</span>(<span class="cm-variable">plot</span> <span class="cm-operator">=</span> <span class="cm-variable">p2</span>, <span class="cm-variable">points</span> <span class="cm-operator">=</span> <span class="cm-variable">genes.to.label</span>, <span class="cm-variable">repel</span> <span class="cm-operator">=</span> <span class="cm-variable">TRUE</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">p1</span> <span class="cm-operator">+</span> <span class="cm-variable">p2</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 520px;"></div><div class="CodeMirror-gutters" style="display: none; height: 520px;"></div></div></div></pre><p><img src="../img\014_单细胞转录组测序数据分析\003_Introduction to scRNA-seq integration（scRNA-seq整合）\006.png" alt="006" style="zoom:67%;" /></p><ul><li><span>可以看出，许多相同的基因在两种细胞类型中上调。</span></li></ul><h5 id='差异表达分析'><span>差异表达分析</span></h5><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 添加新的列，各个细胞的身份注释以及所属的组（刺激或控制），如CD14 Mono_CTRL</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined</span><span class="cm-operator cm-dollar">$</span><span class="cm-variable">celltype.stim</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">paste</span>(<span class="cm-variable">Idents</span>(<span class="cm-variable">immune.combined</span>), <span class="cm-variable">immune.combined</span><span class="cm-operator cm-dollar">$</span><span class="cm-variable">stim</span>, <span class="cm-variable">sep</span> <span class="cm-operator">=</span> <span class="cm-string">"_"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 添加细胞身份注释</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined</span><span class="cm-operator cm-dollar">$</span><span class="cm-variable">celltype</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">Idents</span>(<span class="cm-variable">immune.combined</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 设置对象的标识列为celltype.stim</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Idents</span>(<span class="cm-variable">immune.combined</span>) <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-string">"celltype.stim"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 找出B细胞在两个组中的差异表达基因，指定两个组的细胞标识为B_STIM和B_CTRL</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">b.interferon.response</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">FindMarkers</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">ident.1</span> <span class="cm-operator">=</span> <span class="cm-string">"B_STIM"</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-variable">ident.2</span> <span class="cm-operator">=</span> <span class="cm-string">"B_CTRL"</span>, <span class="cm-variable">verbose</span> <span class="cm-operator">=</span> <span class="cm-variable">FALSE</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 列出前几个差异表达基因</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">head</span>(<span class="cm-variable">b.interferon.response</span>,<span class="cm-number">5</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 312px;"></div><div class="CodeMirror-gutters" style="display: none; height: 312px;"></div></div></div></pre><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-variable">p_val</span> <span class="cm-variable">avg_log2FC</span> <span class="cm-variable">pct.1</span> <span class="cm-variable">pct.2</span> &nbsp; &nbsp; <span class="cm-variable">p_val_adj</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">IFIT1</span> &nbsp;<span class="cm-number">6.590233e-188</span> &nbsp; <span class="cm-number">4.803344</span> <span class="cm-number">1.000</span> <span class="cm-number">0.093</span> <span class="cm-number">9.261255e-184</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">ISG15</span> &nbsp;<span class="cm-number">9.266184e-177</span> &nbsp; <span class="cm-number">5.227579</span> <span class="cm-number">1.000</span> <span class="cm-number">0.484</span> <span class="cm-number">1.302177e-172</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">IFIT3</span> &nbsp;<span class="cm-number">1.052881e-175</span> &nbsp; <span class="cm-number">3.902465</span> <span class="cm-number">0.993</span> <span class="cm-number">0.311</span> <span class="cm-number">1.479614e-171</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">ISG20</span> &nbsp;<span class="cm-number">8.981297e-175</span> &nbsp; <span class="cm-number">3.826229</span> <span class="cm-number">1.000</span> <span class="cm-number">0.447</span> <span class="cm-number">1.262142e-170</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">IFITM3</span> <span class="cm-number">5.120296e-172</span> &nbsp; <span class="cm-number">3.007783</span> <span class="cm-number">1.000</span> <span class="cm-number">0.650</span> <span class="cm-number">7.195552e-168</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 156px;"></div><div class="CodeMirror-gutters" style="display: none; height: 156px;"></div></div></div></pre><ul><li><span>另一种差异表达分析的方法是使用</span><strong><span>FeaturePlot()</span></strong><span>或</span><strong><span>VlnPlot()</span></strong><span>使用</span><strong><span>split.by</span></strong><span>参数进行可视化基因表达。</span></li><li><span>CD3D和GNLY是典型的细胞类型标记（T细胞和NK/CD8 T细胞）几乎不受干扰素刺激的影响</span></li><li><span>IFI6和ISG15是核心的干扰响应基因，在所有细胞类型中都相应地上调</span></li><li><span>CD14和CXCL10显示出细胞类型特异的响应，CD14表达减少在CD14 monocytes，CXCL10显著上调在monocytes和B细胞</span></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">FeaturePlot</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">features</span> <span class="cm-operator">=</span> <span class="cm-variable">c</span>(<span class="cm-string">"CD3D"</span>, <span class="cm-string">"GNLY"</span>, <span class="cm-string">"IFI6"</span>), </span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">split.by</span> <span class="cm-operator">=</span> <span class="cm-string">"stim"</span>, <span class="cm-variable">max.cutoff</span> <span class="cm-operator">=</span> <span class="cm-number">3</span>, <span class="cm-variable">cols</span> <span class="cm-operator">=</span> <span class="cm-variable">c</span>(<span class="cm-string">"grey"</span>, <span class="cm-string">"red"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">plots</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">VlnPlot</span>(<span class="cm-variable">immune.combined</span>, <span class="cm-variable">features</span> <span class="cm-operator">=</span> <span class="cm-variable">c</span>(<span class="cm-string">"LYZ"</span>, <span class="cm-string">"ISG15"</span>, <span class="cm-string">"CXCL10"</span>), </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-variable">split.by</span> <span class="cm-operator">=</span> <span class="cm-string">"stim"</span>, <span class="cm-variable">group.by</span> <span class="cm-operator">=</span> <span class="cm-string">"celltype"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-variable">pt.size</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>, <span class="cm-variable">combine</span> <span class="cm-operator">=</span> <span class="cm-variable">FALSE</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 将三个图显示为一个图，同时为一列</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">wrap_plots</span>(<span class="cm-variable">plots</span> <span class="cm-operator">=</span> <span class="cm-variable">plots</span>, <span class="cm-variable">ncol</span> <span class="cm-operator">=</span> <span class="cm-number">1</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 182px;"></div><div class="CodeMirror-gutters" style="display: none; height: 182px;"></div></div></div></pre><figure><table><thead><tr><th><img src="../img\014_单细胞转录组测序数据分析\003_Introduction to scRNA-seq integration（scRNA-seq整合）\007.png" referrerpolicy="no-referrer" alt="007"></th><th><img src="../img\014_单细胞转录组测序数据分析\003_Introduction to scRNA-seq integration（scRNA-seq整合）\008.png" alt="008" style="zoom:67%;" /></th></tr></thead><tbody></tbody></table></figure><h3 id='使用sctransform进行数据集标准化的集成'><span>使用SCTransform进行数据集标准化的集成</span></h3><ul><li><p><span>使用一种基于正则化负二项式回归的改进的scRNA-seq标准化的方法。</span></p></li><li><p><span>与原来的流程大致相同，不同在于：</span></p><ul><li><span>标准化数据集单独使用</span><strong><span>SCTransform()</span></strong><span>，不需要在集成之前使用</span><strong><span>NormalizeData()</span></strong><span>。</span></li><li><span>通常使用3000个或以上的feature来进行sctransform的下游分析。</span></li><li><span>在找出锚点之前使用</span><strong><span>PrepSCTIntegration()</span></strong><span>。</span></li><li><span>使用</span><strong><span>FindIntegrationAnchors()</span></strong><span>和</span><strong><span>IntegrateData()</span></strong><span>的时候将方法设置为</span><strong><span>SCT</span></strong><span>。</span></li><li><span>不需要运行</span><strong><span>ScaleData()</span></strong><span>。</span></li></ul></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="r" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="r"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.9991px; left: 3.99306px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 划分数据集</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">ifnb.list</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">SplitObject</span>(<span class="cm-variable">ifnb</span>, <span class="cm-variable">split.by</span> <span class="cm-operator">=</span> <span class="cm-string">"stim"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 数据标准化</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">ifnb.list</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">lapply</span>(<span class="cm-variable">X</span> <span class="cm-operator">=</span> <span class="cm-variable">ifnb.list</span>, <span class="cm-variable">FUN</span> <span class="cm-operator">=</span> <span class="cm-variable">SCTransform</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">features</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">SelectIntegrationFeatures</span>(<span class="cm-variable">object.list</span> <span class="cm-operator">=</span> <span class="cm-variable">ifnb.list</span>, <span class="cm-variable">nfeatures</span> <span class="cm-operator">=</span> <span class="cm-number">3000</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">ifnb.list</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">PrepSCTIntegration</span>(<span class="cm-variable">object.list</span> <span class="cm-operator">=</span> <span class="cm-variable">ifnb.list</span>, <span class="cm-variable">anchor.features</span> <span class="cm-operator">=</span> <span class="cm-variable">features</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 找出锚点，方法使用SCT</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.anchors</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">FindIntegrationAnchors</span>(<span class="cm-variable">object.list</span> <span class="cm-operator">=</span> <span class="cm-variable">ifnb.list</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">normalization.method</span> <span class="cm-operator">=</span> <span class="cm-string">"SCT"</span>, <span class="cm-variable">anchor.features</span> <span class="cm-operator">=</span> <span class="cm-variable">features</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 创建集成的数据集</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined.sct</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">IntegrateData</span>(<span class="cm-variable">anchorset</span> <span class="cm-operator">=</span> <span class="cm-variable">immune.anchors</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-variable">normalization.method</span> <span class="cm-operator">=</span> <span class="cm-string">"SCT"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 降维</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined.sct</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">RunPCA</span>(<span class="cm-variable">immune.combined.sct</span>, <span class="cm-variable">verbose</span> <span class="cm-operator">=</span> <span class="cm-variable">FALSE</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">immune.combined.sct</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">RunUMAP</span>(<span class="cm-variable">immune.combined.sct</span>, <span class="cm-variable">reduction</span> <span class="cm-operator">=</span> <span class="cm-string">"pca"</span>, <span class="cm-variable">dims</span> <span class="cm-operator">=</span> <span class="cm-number">1</span><span class="cm-operator">:</span><span class="cm-number">30</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># 可视化</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">p1</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">DimPlot</span>(<span class="cm-variable">immune.combined.sct</span>, <span class="cm-variable">reduction</span> <span class="cm-operator">=</span> <span class="cm-string">"umap"</span>, <span class="cm-variable">group.by</span> <span class="cm-operator">=</span> <span class="cm-string">"stim"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">p2</span> <span class="cm-operator cm-arrow">&lt;-</span> <span class="cm-variable">DimPlot</span>(<span class="cm-variable">immune.combined.sct</span>, <span class="cm-variable">reduction</span> <span class="cm-operator">=</span> <span class="cm-string">"umap"</span>, <span class="cm-variable">group.by</span> <span class="cm-operator">=</span> <span class="cm-string">"seurat_annotations"</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">label</span> <span class="cm-operator">=</span> <span class="cm-variable">TRUE</span>, <span class="cm-variable">repel</span> <span class="cm-operator">=</span> <span class="cm-variable">TRUE</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">p1</span> <span class="cm-operator">+</span> <span class="cm-variable">p2</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 546px;"></div><div class="CodeMirror-gutters" style="display: none; height: 546px;"></div></div></div></pre><p><img src="../img\014_单细胞转录组测序数据分析\003_Introduction to scRNA-seq integration（scRNA-seq整合）\009.png" alt="009" style="zoom:67%;" /></p><ul><li><span>到此数据以及集成完毕，可以根据前面的步骤进行进一步分析。</span></li></ul><p><span>参考资源：</span></p><ul><li><a href='https://satijalab.org/seurat/articles/integration_introduction.html' target='_blank' class='url'>https://satijalab.org/seurat/articles/integration_introduction.html</a></li></ul></div></div>
+</body>
+</html>

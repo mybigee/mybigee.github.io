@@ -1,0 +1,1385 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<script src="https://note.ilulj.top/script/script.js"></script>
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+
+</style><title>004B站英语外教斯远老师</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='b站英语外教斯远老师'><span>B站英语外教斯远老师</span></h1><h2 id='1-10'><span>1-10</span></h2><h3 id='1与再见相关的5句英语'><span>1.与再见相关的5句英语</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>see you</span></td><td><span>再见</span></td></tr><tr><td><span>see you soon</span></td><td><span>待会见</span></td></tr><tr><td><span>see you later</span></td><td><span>晚点见</span></td></tr><tr><td><span>see you around</span></td><td><span>回头见</span></td></tr><tr><td><span>see you tomorrow</span></td><td><span>明天见</span></td></tr></tbody></table></figure><h3 id='2原来如此'><span>2.原来如此</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>no wonder</span></td><td><span>怪不得</span></td></tr><tr><td><span>that&#39;s why</span></td><td><span>原来是这样啊</span></td></tr><tr><td><span>that explains it</span></td><td><span>这就解释得通了</span></td></tr></tbody></table></figure><h3 id='3时间介词'><span>3.时间介词</span></h3><ul><li><span>时间大于一天用</span><code>in</code><span>，in summer、in October</span></li><li><span>时间等于一天用</span><code>on</code><span>，on Sunday、on Friday</span></li><li><span>时间小于一天用</span><code>at</code><span>，at five o&#39;clock、at night</span></li><li><span>特殊：in the morning、in the evening、in the afternoon</span></li></ul><h3 id='4常见的六个动作'><span>4.常见的六个动作</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>pat</span></td><td><span>拍打</span></td></tr><tr><td><span>grab</span></td><td><span>抓住</span></td></tr><tr><td><span>poke</span></td><td><span>戳</span></td></tr><tr><td><span>pull</span></td><td><span>拉</span></td></tr><tr><td><span>punch</span></td><td><span>拳击</span></td></tr><tr><td><span>hold</span></td><td><span>握住</span></td></tr></tbody></table></figure><h3 id='5出门前的句子'><span>5.出门前的句子</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Are you ready?</span></td><td><span>你准备好了吗？</span></td></tr><tr><td><span>Hurry up.</span></td><td><span>赶快。</span></td></tr><tr><td><span>We have to leave now.</span></td><td><span>我们现在必须离开了。</span></td></tr><tr><td><span>I&#39;m waiting for you.</span></td><td><span>我在等你。</span></td></tr><tr><td><span>We&#39;re almost late.</span></td><td><span>我们几乎迟到了。</span></td></tr></tbody></table></figure><h3 id='6表示感谢'><span>6.表示感谢</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>You&#39;re welcome.</span></td><td><span>别客气。</span></td></tr><tr><td><span>No problem.</span></td><td><span>没问题。</span></td></tr><tr><td><span>It&#39;s nothing.</span></td><td><span>没事。</span></td></tr><tr><td><span>Sure thing.</span></td><td><span>应该的。</span></td></tr></tbody></table></figure><h3 id='7起床'><span>7.起床</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Rise shine.</span></td><td><span>该起床了。</span></td></tr><tr><td><span>It&#39;s time to get dressed.</span></td><td><span>该穿好衣服了。</span></td></tr><tr><td><span>Brush your teeth.</span></td><td><span>刷牙。</span></td></tr><tr><td><span>Come and have breakfast.</span></td><td><span>过来吃早餐了。</span></td></tr></tbody></table></figure><h3 id='8位置'><span>8.位置</span></h3><ul><li><span>长在树上的用</span><code>on</code><span>，如：The apples are on the tree.</span></li><li><span>不是长在树上的用</span><code>in</code><span>，如：The cat is in the tree.</span></li></ul><h3 id='9晒黑'><span>9.晒黑</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Sun tan</span></td><td><span>晒黑</span></td></tr><tr><td><span>I&#39;m tanned.</span></td><td><span>我晒黑了。</span></td></tr></tbody></table></figure><h3 id='10问好'><span>10.问好</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>How&#39;s it going?</span></td><td><span>最近怎么样？</span></td></tr><tr><td><span>How&#39;s everything?</span></td><td><span>一切都好吗？</span></td></tr><tr><td><span>What&#39;s the latest？</span></td><td><span>最新消息是什么？</span></td></tr><tr><td><span>What&#39;s been happening？</span></td><td><span>发生了什么事？</span></td></tr></tbody></table></figure><h2 id='11-21'><span>11-21</span></h2><h3 id='11爆胎'><span>11.爆胎</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>I&#39;ve got a flat tire.(轮胎平了)</span></td><td><span>我的轮胎破了。</span></td></tr><tr><td><span>Let&#39;s fix it.</span></td><td><span>修理它。</span></td></tr></tbody></table></figure><h3 id='12命令'><span>12.命令</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Tell me.</span></td><td><span>告诉我。</span></td></tr><tr><td><span>Show me.</span></td><td><span>给我看看。</span></td></tr><tr><td><span>Listen to me.</span></td><td><span>听我说。</span></td></tr><tr><td><span>Flower me.</span></td><td><span>跟着我。</span></td></tr><tr><td><span>Give me a like.</span></td><td><span>给我点一个赞。</span></td></tr></tbody></table></figure><h3 id='13懒得理你'><span>13.懒得理你</span></h3><ul><li><span>talk to the hand.</span></li></ul><h3 id='14take'><span>14.take</span></h3><ul><li><span>万能动词</span></li></ul><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Take a bite.</span></td><td><span>吃一口</span></td></tr><tr><td><span>Take a nap.</span></td><td><span>睡一会</span></td></tr><tr><td><span>Take a shower.</span></td><td><span>洗个澡</span></td></tr><tr><td><span>Take a look.</span></td><td><span>看一眼</span></td></tr><tr><td><span>Take a seat.</span></td><td><span>坐下</span></td></tr><tr><td><span>Take a walk.</span></td><td><span>散步</span></td></tr><tr><td><span>Take a break.</span></td><td><span>休息一下</span></td></tr></tbody></table></figure><h3 id='15情话'><span>15.情话</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>I like you.</span></td><td><span>我喜欢你</span></td></tr><tr><td><span>I love you.</span></td><td><span>我爱你</span></td></tr><tr><td><span>I miss you.</span></td><td><span>我想你</span></td></tr><tr><td><span>I need you.</span></td><td><span>我需要你</span></td></tr><tr><td><span>I feel you.</span></td><td><span>我懂你</span></td></tr></tbody></table></figure><h3 id='16大'><span>16.大</span></h3><ul><li><span>big：表示体积大，如 a big house</span></li><li><span>heavy：量大，如 heavy rain（大雨）</span></li><li><span>strong：强大，如 strong wind（大风）</span></li><li><span>thick：浓度大，如 thick fog（大雾）</span></li></ul><h3 id='17上厕所'><span>17.上厕所</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>I need to go to the restroom.</span></td><td><span>我需要上厕所。</span></td></tr><tr><td><span>I need to go to the washroom.</span></td><td><span>我需要上厕所。</span></td></tr><tr><td><span>I need to pee.</span></td><td><span>我要尿尿。</span></td></tr><tr><td><span>I need to poop.</span></td><td><span>我要大便。</span></td></tr></tbody></table></figure><h3 id='18喜欢'><span>18.喜欢</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>my favorite</span></td><td><span>最喜欢</span></td></tr><tr><td><span>least favorite</span></td><td><span>最不喜欢</span></td></tr><tr><td><span>something that I like least</span></td><td><span>我最不喜欢xxx</span></td></tr></tbody></table></figure><ul><li><span>Bananas are my least favorite fruit.</span></li><li><span>September is the month that I like least.</span></li></ul><h3 id='19some-time'><span>19.some time</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th><th><span>例句</span></th></tr></thead><tbody><tr><td><span>some time</span></td><td><span>一段时间</span></td><td><span>Do you have some time?(你有一些时间吗？)</span></td></tr><tr><td><span>sometime</span></td><td><span>某个时候</span></td><td><span>Let&#39;s go sometime.(我们某个时间去。)</span></td></tr><tr><td><span>some times</span></td><td><span>几次</span></td><td><span>I&#39;ve been here some times.(我来过这里几次。)</span></td></tr><tr><td><span>sometimes</span></td><td><span>有时</span></td><td><span>I sometimes go there.(我有时去那里。)</span></td></tr></tbody></table></figure><h3 id='20中秋'><span>20.中秋</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>mid autumn</span></td><td><span>中秋</span></td></tr><tr><td><span>mooncakes</span></td><td><span>月饼</span></td></tr><tr><td><span>family reunion</span></td><td><span>合家团圆</span></td></tr><tr><td><span>happy mid autumn festival</span></td><td><span>中秋节快乐</span></td></tr></tbody></table></figure><h2 id='21-30'><span>21-30</span></h2><h3 id='21have'><span>21.have</span></h3><ul><li><span>万能动词</span></li></ul><figure><table><thead><tr><th><span>含义</span></th><th><span>例句</span></th></tr></thead><tbody><tr><td><span>有</span></td><td><span>have a book（有一本书）</span></td></tr><tr><td><span>吃</span></td><td><span>have lunch（吃午餐）</span></td></tr><tr><td><span>喝</span></td><td><span>have tea（喝茶）</span></td></tr><tr><td><span>去</span></td><td><span>have a picnic（去野餐）</span></td></tr><tr><td><span>度过</span></td><td><span>have fun（度过美好的时间）</span></td></tr><tr><td><span>患病</span></td><td><span>have a cold（感冒）</span></td></tr><tr><td><span>举办</span></td><td><span>have a party（开派对）</span></td></tr><tr><td><span>进行</span></td><td><span>have sports（进行运动）</span></td></tr></tbody></table></figure><h3 id='22in-on'><span>22.in on</span></h3><ul><li><span>可以站起来的使用</span><code>on</code><span>，不可以站起来的使用</span><code>in</code></li></ul><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>on the bus</span></td><td><span>在公交车上</span></td></tr><tr><td><span>on the train</span></td><td><span>在火车上</span></td></tr><tr><td><span>on the plane</span></td><td><span>在飞机上</span></td></tr><tr><td><span>in the taxi</span></td><td><span>在出租出上</span></td></tr><tr><td><span>in the car</span></td><td><span>在小汽车上</span></td></tr></tbody></table></figure><h3 id='23随便'><span>23.随便</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>whatever</span></td><td><span>随便（带情绪）</span></td></tr><tr><td><span>Anything will do.</span></td><td><span>我都可以</span></td></tr><tr><td><span>I don&#39;t mind.</span></td><td><span>我不介意</span></td></tr><tr><td><span>It&#39;s up to you.</span></td><td><span>由你来定</span></td></tr><tr><td><span>You are the boss.</span></td><td><span>你说了算</span></td></tr><tr><td><span>You decide.</span></td><td><span>你决定</span></td></tr></tbody></table></figure><h3 id='24whats-up'><span>24.What&#39;s up</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>What&#39;s up</span></td><td><span>怎么了</span></td></tr><tr><td><span>Nothing much.</span></td><td><span>没事</span></td></tr><tr><td><span>I&#39;m doing good.</span></td><td><span>我很好</span></td></tr><tr><td><span>Same old,same old.</span></td><td><span>老样子</span></td></tr><tr><td><span>Couldn&#39;t be better.</span></td><td><span>再好不过了</span></td></tr><tr><td><span>All good.</span></td><td><span>一切都好</span></td></tr></tbody></table></figure><h3 id='25快点'><span>25.快点</span></h3><figure><table><thead><tr><th><span>英语</span></th></tr></thead><tbody><tr><td><span>shake a leg</span></td></tr><tr><td><span>step on it</span></td></tr><tr><td><span>chop-chop</span></td></tr></tbody></table></figure><h3 id='26the'><span>26.the</span></h3><ul><li><span>无</span><code>the</code><span>表示动作，有</span><code>the</code><span>表示地点</span></li></ul><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>go to school</span></td><td><span>去上学</span></td></tr><tr><td><span>go to the school</span></td><td><span>去学校（不一定是学生）</span></td></tr><tr><td><span>in hospital</span></td><td><span>住院</span></td></tr><tr><td><span>in the hospital</span></td><td><span>在医院</span></td></tr></tbody></table></figure><h3 id='27你辛苦了'><span>27.你辛苦了</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Thank you for your hard work.</span></td><td><span>你辛苦了（对下属说）</span></td></tr><tr><td><span>Thank you for your effort.</span></td><td><span>你辛苦了（老师、朋友）</span></td></tr><tr><td><span>Thank you for your everything you&#39;ve done.</span></td><td><span>谢谢你做的一切（亲人、家人、朋友）</span></td></tr></tbody></table></figure><h3 id='28口语简读'><span>28.口语简读</span></h3><figure><table><thead><tr><th><span>原型</span></th><th><span>简化</span></th></tr></thead><tbody><tr><td><span>give me</span></td><td><span>gimme</span></td></tr><tr><td><span>going to（将要）</span></td><td><span>gonna</span></td></tr><tr><td><span>don&#39;t know</span></td><td><span>dunno</span></td></tr><tr><td><span>want to</span></td><td><span>wanna</span></td></tr><tr><td><span>kind of（有点）</span></td><td><span>kinda</span></td></tr></tbody></table></figure><h3 id='29旅游'><span>29.旅游</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>on time</span></td><td><span>准时</span></td></tr><tr><td><span>pack your bags</span></td><td><span>收拾行李</span></td></tr><tr><td><span>luggage</span></td><td><span>行李</span></td></tr><tr><td><span>vacation</span></td><td><span>假期（美）</span></td></tr><tr><td><span>holiday</span></td><td><span>假期（英）</span></td></tr><tr><td><span>train ride</span></td><td><span>火车旅行</span></td></tr><tr><td><span>set off on a journey</span></td><td><span>出发旅行</span></td></tr><tr><td><span>go cycling/ride a bike</span></td><td><span>骑自行车</span></td></tr><tr><td><span>drive a car</span></td><td><span>开车</span></td></tr><tr><td><span>get on a bus</span></td><td><span>上公共汽车</span></td></tr><tr><td><span>get off a bus</span></td><td><span>下公共汽车</span></td></tr><tr><td><span>arrive at the airport</span></td><td><span>到机场</span></td></tr></tbody></table></figure><h3 id='30剥皮'><span>30.剥皮</span></h3><ul><li><span>peel：动词或名词</span></li></ul><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>peel an apple</span></td><td><span>削一个苹果</span></td></tr><tr><td><span>peel a mandarin</span></td><td><span>剥一个橘子</span></td></tr><tr><td><span>peel a banana</span></td><td><span>剥一个香蕉</span></td></tr><tr><td><span>banana peel</span></td><td><span>香蕉皮</span></td></tr><tr><td><span>apple peel</span></td><td><span>苹果皮</span></td></tr></tbody></table></figure><h2 id='31-40'><span>31-40</span></h2><h3 id='31small和little'><span>31.small和little</span></h3><ul><li><span>little：一般形容人、动物，表示小巧可爱的，如 a little girl、a little angel、a little cat</span></li><li><span>small：形容物体尺寸小，如 a small house、a small toy</span></li></ul><h3 id='32make和do'><span>32.make和do</span></h3><ul><li><span>需要创造的对象（从0到1）使用</span><code>make</code></li><li><span>已近存在的使用</span><code>do</code></li></ul><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>make a cake</span></td><td><span>做蛋糕</span></td></tr><tr><td><span>make coffee</span></td><td><span>冲咖啡</span></td></tr><tr><td><span>do the laundry</span></td><td><span>洗衣服</span></td></tr><tr><td><span>do the dishes</span></td><td><span>洗盘子</span></td></tr></tbody></table></figure><h3 id='33全力以赴'><span>33.全力以赴</span></h3><figure><table><thead><tr><th><span>短语</span></th><th><span>例句</span></th></tr></thead><tbody><tr><td><span>go all out</span></td><td><span>Go all out in the exam.在考试中全力以赴。</span></td></tr><tr><td><span>make every effort</span></td><td><span>The athletes made every effort to win the race.</span></td></tr><tr><td><span>go to great lengths</span></td><td><span>He decided to go to great lengths to fill his ambition.</span></td></tr></tbody></table></figure><h3 id='34吃饱了'><span>34.吃饱了</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Are you full?</span></td><td><span>你吃饱了吗？</span></td></tr><tr><td><span>I&#39;m full.</span></td><td><span>我吃饱了。</span></td></tr><tr><td><span>I&#39;ve had enough</span></td><td><span>我吃饱了。</span></td></tr><tr><td><span>I&#39;m stuffed.</span></td><td><span>我吃饱了。</span></td></tr><tr><td><span>I can&#39;t eat anymore.</span></td><td><span>我不可以再吃了。</span></td></tr></tbody></table></figure><h3 id='35疑问句do和are'><span>35.疑问句do和are</span></h3><ul><li><span>原句中有动词，使用do，如 Do you like it?、Do you speak English?。</span></li><li><span>没有动词或动词的其他形式，使用are，如 Are you happy?、Are you a student?、Are you playing?、Are you doing your homework?。</span></li></ul><h3 id='36英语缩写'><span>36.英语缩写</span></h3><figure><table><thead><tr><th><span>缩写</span></th><th><span>原文</span></th></tr></thead><tbody><tr><td><span>FYI</span></td><td><span>for your information（供参考）</span></td></tr><tr><td><span>IDK</span></td><td><span>I don&#39;t know.</span></td></tr><tr><td><span>BRB</span></td><td><span>be right back（马上回来）</span></td></tr><tr><td><span>BTW</span></td><td><span>by the way（顺便说一句）</span></td></tr><tr><td><span>HAND</span></td><td><span>have a nice day（祝你度过愉快的一天）</span></td></tr><tr><td><span>ADBB</span></td><td><span>All done,bye bye.（都完了，拜拜）</span></td></tr></tbody></table></figure><h3 id='37表示喜欢动物'><span>37.表示喜欢动物</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>含义</span></th></tr></thead><tbody><tr><td><span>I like dog.</span></td><td><span>我喜欢狗肉。</span></td></tr><tr><td><span>I like dogs.</span></td><td><span>我喜欢狗。</span></td></tr><tr><td><span>I like cats.</span></td><td><span>我喜欢小猫。</span></td></tr></tbody></table></figure><h3 id='38买单'><span>38.买单</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>check, please</span></td><td><span>买单</span></td></tr><tr><td><span>Can I have the check please?</span></td><td><span>可以给我账单吗？</span></td></tr></tbody></table></figure><h3 id='39time'><span>39.time</span></h3><figure><table><thead><tr><th><span>含义</span></th><th><span>例子</span></th></tr></thead><tbody><tr><td><span>in time</span></td><td><span>及时</span></td></tr><tr><td><span>on time</span></td><td><span>准时</span></td></tr><tr><td><span>all the time</span></td><td><span>一直</span></td></tr><tr><td><span>at one time</span></td><td><span>曾经</span></td></tr><tr><td><span>at times</span></td><td><span>偶尔</span></td></tr><tr><td><span>in no time</span></td><td><span>马上</span></td></tr><tr><td><span>at the same time</span></td><td><span>同时</span></td></tr><tr><td><span>at any time</span></td><td><span>随时</span></td></tr></tbody></table></figure><h3 id='40前天'><span>40.前天</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>the day before yesterday</span></td><td><span>前天</span></td></tr><tr><td><span>two days ago</span></td><td><span>前天</span></td></tr><tr><td><span>three days ago</span></td><td><span>大前天</span></td></tr><tr><td><span>the day after tomorrow</span></td><td><span>后天</span></td></tr><tr><td><span>in three days</span></td><td><span>大后天</span></td></tr></tbody></table></figure><h2 id='41-50'><span>41-50</span></h2><h3 id='41肯定'><span>41.肯定</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Sure</span></td><td><span>当然</span></td></tr><tr><td><span>Sure thing</span></td><td><span>当然好了</span></td></tr><tr><td><span>you bet</span></td><td><span>你说的没错</span></td></tr><tr><td><span>Totally</span></td><td><span>完全没有问题</span></td></tr><tr><td><span>Of course</span></td><td><span>当然</span></td></tr></tbody></table></figure><h3 id='42无聊'><span>42.无聊</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>I&#39;m boring</span></td><td><span>我是一个无趣的人。</span></td></tr><tr><td><span>I&#39;m bored</span></td><td><span>我很无聊。</span></td></tr><tr><td><span>I&#39;m excited</span></td><td><span>我好兴奋。</span></td></tr></tbody></table></figure><h3 id='43手指'><span>43.手指</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>thumb</span></td><td><span>大拇指，thumbs up（点赞）</span></td></tr><tr><td><span>index finger</span></td><td><span>食指</span></td></tr><tr><td><span>middle finger</span></td><td><span>中指</span></td></tr><tr><td><span>ring finger</span></td><td><span>无名指</span></td></tr><tr><td><span>picky</span></td><td><span>小指，picky swear（拉钩）</span></td></tr></tbody></table></figure><h3 id='44你先忙'><span>44.你先忙</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>I&#39;ll let you go.</span></td><td><span>你先忙</span></td></tr><tr><td><span>I&#39;ll get out of your hair.</span></td><td><span>我不打扰你了</span></td></tr><tr><td><span>I&#39;m going now,talk to you later.</span></td><td><span>我先走了，回头再聊</span></td></tr></tbody></table></figure><h3 id='45can-could-would'><span>45.can could would</span></h3><ul><li><span>can：表示的是能力，Can you help me?</span></li><li><span>could：指可能，Could you help me?</span></li><li><span>would：表示是否愿意，Would you help me?（最礼貌）</span></li></ul><h3 id='46味道'><span>46.味道</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>sour</span></td><td><span>酸的</span></td></tr><tr><td><span>sweet</span></td><td><span>甜的</span></td></tr><tr><td><span>bitter</span></td><td><span>苦的</span></td></tr><tr><td><span>spicy</span></td><td><span>辣的</span></td></tr><tr><td><span>salty</span></td><td><span>咸的</span></td></tr><tr><td><span>bland</span></td><td><span>没有味道的</span></td></tr><tr><td><span>fishy</span></td><td><span>腥的</span></td></tr><tr><td><span>crunchy</span></td><td><span>酥脆的</span></td></tr></tbody></table></figure><h3 id='47吃饭'><span>47.吃饭</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>first wash your hands</span></td><td><span>先洗手</span></td></tr><tr><td><span>Have some meat</span></td><td><span>吃点肉</span></td></tr><tr><td><span>Eat more vegetables</span></td><td><span>多吃蔬菜</span></td></tr><tr><td><span>Have you had enough?</span></td><td><span>你吃饱了吗？</span></td></tr><tr><td><span>Wipe your mouth</span></td><td><span>擦擦嘴</span></td></tr></tbody></table></figure><h3 id='48no-not'><span>48.no not</span></h3><ul><li><span>名词前加</span><code>no</code><span>表示没有</span></li><li><span>其他词前面加</span><code>not</code><span>表示不</span></li></ul><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>I have no time.</span></td><td><span>我没有时间</span></td></tr><tr><td><span>I am not busy.</span></td><td><span>我不忙</span></td></tr></tbody></table></figure><h3 id='49dont'><span>49.don&#39;t</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Don&#39;t move.</span></td><td><span>别动</span></td></tr><tr><td><span>Don&#39;t do it.</span></td><td><span>别这样</span></td></tr><tr><td><span>Don&#39;t forget it.</span></td><td><span>别忘记</span></td></tr><tr><td><span>Don&#39;t come in.</span></td><td><span>别进来</span></td></tr><tr><td><span>Don&#39;t touch it.</span></td><td><span>别碰它</span></td></tr></tbody></table></figure><h3 id='50漂亮'><span>50.漂亮</span></h3><ul><li><span>小朋友：cute（可爱的）、sweet（甜美的）</span></li><li><span>女生：gorgeous（动人的）、elegant（优雅的）</span></li><li><span>男生：handsome（英俊的）、charming（有魅力的）</span></li><li><span>风景：grand（雄伟的）、spectacular（壮丽的）</span></li></ul><h2 id='51-60'><span>51-60</span></h2><h3 id='51在床上'><span>51.在床上</span></h3><figure><table><thead><tr><th><span>使用条件</span></th><th><span>短语</span></th><th><span>例句</span></th></tr></thead><tbody><tr><td><span>盖着被子使用</span><code>in</code></td><td><span>in the bed</span></td><td><span>I&#39;m lying in the bed.（我躺在床上）</span></td></tr><tr><td><span>坐在被子上使用</span><code>on</code></td><td><span>on the bed</span></td><td><span>I&#39;m sitting on the bed.（我坐在床上）</span></td></tr></tbody></table></figure><h3 id='52米'><span>52.米</span></h3><ul><li><span>除1米外，都用复数。</span></li></ul><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>1米</span></td><td><span>one meter</span></td></tr><tr><td><span>2米</span></td><td><span>two meters</span></td></tr><tr><td><span>0.5米</span></td><td><span>zero point five meters</span></td></tr><tr><td><span>0米</span></td><td><span>zero meters</span></td></tr><tr><td><span>半米</span></td><td><span>half meter、half of meter、half of a meter</span></td></tr></tbody></table></figure><h3 id='53反义词'><span>53.反义词</span></h3><figure><table><thead><tr><th>&nbsp;</th><th><span>反义词</span></th></tr></thead><tbody><tr><td><span>big</span></td><td><span>small</span></td></tr><tr><td><span>tall</span></td><td><span>short</span></td></tr><tr><td><span>far</span></td><td><span>near</span></td></tr><tr><td><span>cold</span></td><td><span>hot</span></td></tr><tr><td><span>fast</span></td><td><span>slow</span></td></tr><tr><td><span>heavy</span></td><td><span>light</span></td></tr></tbody></table></figure><h3 id='54方位介词'><span>54.方位介词</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>up</span></td><td><span>向上</span></td></tr><tr><td><span>down</span></td><td><span>向下</span></td></tr><tr><td><span>over</span></td><td><span>越过</span></td></tr><tr><td><span>around</span></td><td><span>围绕</span></td></tr><tr><td><span>into</span></td><td><span>进入</span></td></tr><tr><td><span>out of</span></td><td><span>出来</span></td></tr><tr><td><span>to</span></td><td><span>朝向</span></td></tr><tr><td><span>away from</span></td><td><span>远离</span></td></tr><tr><td><span>onto</span></td><td><span>上去</span></td></tr><tr><td><span>off</span></td><td><span>脱离</span></td></tr><tr><td><span>pass</span></td><td><span>经过</span></td></tr><tr><td><span>through</span></td><td><span>穿过</span></td></tr></tbody></table></figure><h3 id='55对不起'><span>55.对不起</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>It&#39;s my fault.</span></td><td><span>我的错</span></td></tr><tr><td><span>Sorry about that.</span></td><td><span>非常抱歉</span></td></tr><tr><td><span>My bad.</span></td><td><span>是我错了</span></td></tr><tr><td><span>I apologize.</span></td><td><span>我道歉</span></td></tr><tr><td><span>Please forgive me.</span></td><td><span>请原谅</span></td></tr></tbody></table></figure><h3 id='56mate'><span>56.mate</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>classmate</span></td><td><span>同学</span></td></tr><tr><td><span>roommate</span></td><td><span>室友</span></td></tr><tr><td><span>teammate</span></td><td><span>队友</span></td></tr><tr><td><span>schoolmate</span></td><td><span>校友</span></td></tr><tr><td><span>playmate</span></td><td><span>玩伴</span></td></tr><tr><td><span>workmate</span></td><td><span>同事</span></td></tr></tbody></table></figure><h3 id='57好'><span>57.好</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>含义</span></th></tr></thead><tbody><tr><td><span>nice</span></td><td><span>表示人的性格好、天气好</span></td></tr><tr><td><span>fine</span></td><td><span>表示一个人的状态好</span></td></tr><tr><td><span>good</span></td><td><span>当动词或形容词</span></td></tr><tr><td><span>well</span></td><td><span>表示事情做的好</span></td></tr></tbody></table></figure><figure><table><thead><tr><th><span>英语例句</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><u><span>Nice</span></u><span> weather.</span></td><td><span>好天气</span></td></tr><tr><td><span>He&#39;s a really </span><u><span>nice</span></u><span> guy.</span></td><td><span>他是一个好人</span></td></tr><tr><td><u><span>Fine</span></u><span> thanks.</span></td><td><span>很好谢谢</span></td></tr><tr><td><span>A </span><u><span>good</span></u><span> book.</span></td><td><span>一本好书</span></td></tr><tr><td><span>This is very </span><u><span>good</span></u><span> news.</span></td><td><span>这条消息真让人高兴</span></td></tr><tr><td><span>Well done.</span></td><td><span>干得好</span></td></tr></tbody></table></figure><h3 id='58每天'><span>58.每天</span></h3><ul><li><code>everyday</code><span>：每天的，日常的，如 everyday things（日常物品）</span></li><li><code>every day</code><span>：每一天，当时间状语，如 I exercise every day.</span></li></ul><h3 id='59may-be'><span>59.may be</span></h3><ul><li><code>maybe</code><span>：副词，放于句子开头，表示可能怎么样，如 Maybe he&#39;ll come home.（他可能会回来）</span></li><li><code>may be</code><span>：动词短语，放于句子中间，如 She may be successful now.（她现在可能成功了）</span></li></ul><h3 id='60你怎么了'><span>60.你怎么了</span></h3><figure><table><thead><tr><th><span>英语</span></th></tr></thead><tbody><tr><td><span>What&#39;s wrong?</span></td></tr><tr><td><span>What&#39;s up?</span></td></tr><tr><td><span>What&#39;s the matter?</span></td></tr><tr><td><span>You good/You okay</span></td></tr></tbody></table></figure><h2 id='61-70'><span>61-70</span></h2><h3 id='61way'><span>61.way</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>runway</span></td><td><span>跑道</span></td></tr><tr><td><span>doorway</span></td><td><span>门口</span></td></tr><tr><td><span>railway</span></td><td><span>铁路</span></td></tr><tr><td><span>highway</span></td><td><span>公路</span></td></tr><tr><td><span>waterway</span></td><td><span>水路</span></td></tr><tr><td><span>sideway</span></td><td><span>人行道</span></td></tr><tr><td><span>halfway</span></td><td><span>半路</span></td></tr></tbody></table></figure><h3 id='62玩'><span>62.玩</span></h3><ul><li><span>play：后面要加玩的对象，如 play basketball、play games</span></li><li><span>玩手机：使用介词</span><code>on</code><span>，如 Don&#39;t always be on your phone.</span></li></ul><h3 id='63提问时间'><span>63.提问时间</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>What time is it?</span></td><td><span>现在是什么时间</span></td></tr><tr><td><span>breakfast time</span></td><td><span>早餐时间</span></td></tr><tr><td><span>bath time</span></td><td><span>洗澡时间</span></td></tr><tr><td><span>learning time</span></td><td><span>学习时间</span></td></tr><tr><td><span>Where are we going?</span></td><td><span>我们要去哪里</span></td></tr><tr><td><span>Let&#39;s go home</span></td><td><span>我们回家</span></td></tr><tr><td><span>go to the park</span></td><td><span>去公园</span></td></tr><tr><td><span>What&#39;s cooking?</span></td><td><span>在煮什么</span></td></tr></tbody></table></figure><h3 id='64docan-you'><span>64.do/can you</span></h3><ul><li><span>do：表示习惯，如 Do you play basketball?（你习惯打篮球吗）</span></li><li><span>can：表示能力，如 Can you speak English?（你会说英语吗）</span></li></ul><h3 id='65圣诞节'><span>65.圣诞节</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Christmas</span></td><td><span>圣诞节</span></td></tr><tr><td><span>Christmas Eve</span></td><td><span>平安夜</span></td></tr><tr><td><span>Christmas Tree</span></td><td><span>圣诞树</span></td></tr><tr><td><span>Christmas present</span></td><td><span>圣诞礼物</span></td></tr><tr><td><span>Danta Claus</span></td><td><span>圣诞老人</span></td></tr><tr><td><span>Merry Christmas</span></td><td><span>圣诞节快乐</span></td></tr></tbody></table></figure><h3 id='66生病'><span>66.生病</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>catch a cold</span></td><td><span>感冒</span></td></tr><tr><td><span>have a fever</span></td><td><span>发烧</span></td></tr><tr><td><span>have a sore throat</span></td><td><span>喉咙痛</span></td></tr><tr><td><span>have a runny nose</span></td><td><span>流鼻涕</span></td></tr><tr><td><span>cough</span></td><td><span>咳嗽</span></td></tr><tr><td><span>headache</span></td><td><span>头痛</span></td></tr></tbody></table></figure><h3 id='67meter'><span>67.meter</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>kilometer</span></td><td><span>千米</span></td></tr><tr><td><span>decimeter</span></td><td><span>分米</span></td></tr><tr><td><span>centimeter</span></td><td><span>厘米</span></td></tr><tr><td><span>millimeter</span></td><td><span>毫米</span></td></tr><tr><td><span>nanometer</span></td><td><span>纳米</span></td></tr></tbody></table></figure><h3 id='68eathavetake'><span>68.eat/have/take</span></h3><ul><li><span>eat：日常使用，表示吃东西，eat fruit、eat pizza</span></li><li><span>take medicine：吃药</span></li><li><span>have：表示吃或喝，have breakfast、have a drink</span></li><li><span>不知道使用哪个的情况下，都可以使用have表示吃。</span></li></ul><h3 id='69频率副词'><span>69.频率副词</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>always</span></td><td><span>总是</span></td></tr><tr><td><span>usually</span></td><td><span>通常</span></td></tr><tr><td><span>frequently</span></td><td><span>时常</span></td></tr><tr><td><span>often</span></td><td><span>经常</span></td></tr><tr><td><span>sometimes</span></td><td><span>有时候</span></td></tr><tr><td><span>occasionally</span></td><td><span>偶尔</span></td></tr><tr><td><span>hardly ever</span></td><td><span>几乎不</span></td></tr><tr><td><span>never</span></td><td><span>从不</span></td></tr></tbody></table></figure><h3 id='70干什么'><span>70.干什么</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>What&#39;s up?</span></td><td><span>忙什么呢</span></td></tr><tr><td><span>What are you up to?</span></td><td><span>在忙什么呢</span></td></tr></tbody></table></figure><h2 id='71-80'><span>71-80</span></h2><h3 id='71上下班'><span>71.上下班</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>go to work</span></td><td><span>上班</span></td></tr><tr><td><span>I&#39;m going to work.</span></td><td><span>我要去上班</span></td></tr><tr><td><span>Finish work</span></td><td><span>下班</span></td></tr><tr><td><span>Get off work</span></td><td><span>下班</span></td></tr><tr><td><span>I&#39;m going to finish work.</span></td><td><span>我要下班了</span></td></tr><tr><td><span>I get off work at 6.</span></td><td><span>我6点下班</span></td></tr></tbody></table></figure><h3 id='72动作词组'><span>72.动作词组</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>pick up</span></td><td><span>拿起</span></td></tr><tr><td><span>put down</span></td><td><span>放下</span></td></tr><tr><td><span>take off</span></td><td><span>取下</span></td></tr><tr><td><span>take out</span></td><td><span>拿出来</span></td></tr><tr><td><span>turn on</span></td><td><span>打开</span></td></tr><tr><td><span>turn off</span></td><td><span>关闭</span></td></tr></tbody></table></figure><h3 id='73外国人'><span>73.外国人</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>foreigner</span></td><td><span>外国人（不礼貌）</span></td></tr><tr><td><span>expat</span></td><td><span>在国外的人</span></td></tr></tbody></table></figure><h3 id='74拿'><span>74.拿</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th><th><span>例句</span></th></tr></thead><tbody><tr><td><span>take</span></td><td><span>拿走、带走</span></td><td><span>I forgot to take my bag to school.</span></td></tr><tr><td><span>bring</span></td><td><span>拿来、带来</span></td><td><span>I will bring some food for you.</span></td></tr><tr><td><span>carry</span></td><td><span>搬、运，不强调方向</span></td><td><span>She is carrying a bag.（她背着一个包）</span></td></tr><tr><td><span>fetch</span></td><td><span>拿来、取走</span></td><td><span>Please fetch me some water.（请给我拿一些水）</span></td></tr></tbody></table></figure><h3 id='75家务'><span>75.家务</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Do the washing.</span></td><td><span>洗衣服</span></td></tr><tr><td><span>Hang out the clothes.</span></td><td><span>晾衣服</span></td></tr><tr><td><span>Sweep the floor.</span></td><td><span>扫地</span></td></tr><tr><td><span>Wipe the table.</span></td><td><span>擦桌子</span></td></tr><tr><td><span>Wash the dishes.</span></td><td><span>洗碗</span></td></tr></tbody></table></figure><h3 id='76说'><span>76.说</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>例子</span></th></tr></thead><tbody><tr><td><span>speak + 语言</span></td><td><span>speak English（说英语）</span></td></tr><tr><td><span>say + 内容</span></td><td><span>say sorry（说抱歉）</span></td></tr><tr><td><span>tell + 人</span></td><td><span>Tell me a joke.（给我讲一个笑话）</span></td></tr><tr><td><span>talk + to/with 表示和谁说</span></td><td><span>Talk to your friends.（和你的朋友交流）</span></td></tr></tbody></table></figure><h3 id='77位置介词'><span>77.位置介词</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>含义</span></th><th><span>例句</span></th></tr></thead><tbody><tr><td><span>on</span></td><td><span>在上面</span></td><td><span>I&#39;m on the bed.（我在床的上面）</span></td></tr><tr><td><span>in</span></td><td><span>在里面</span></td><td><span>I&#39;m in the bed.（我在床的上(盖着被子)）</span></td></tr><tr><td><span>next to</span></td><td><span>在旁边</span></td><td><span>I&#39;m next to the bed.（我在床的旁边）</span></td></tr><tr><td><span>in front of</span></td><td><span>在前面</span></td><td><span>I’m in front of the bed.（我在床的前面）</span></td></tr><tr><td><span>under</span></td><td><span>在下面</span></td><td><span>I&#39;m under the bed.（我在床的下面）</span></td></tr></tbody></table></figure><h3 id='78短语'><span>78.短语</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>dream big</span></td><td><span>有梦想</span></td></tr><tr><td><span>plan well</span></td><td><span>做计划</span></td></tr><tr><td><span>work hard</span></td><td><span>努力</span></td></tr><tr><td><span>keep smiling</span></td><td><span>保持微笑</span></td></tr></tbody></table></figure><h3 id='79春节'><span>79.春节</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>Chinese New Year</span></td><td><span>春节</span></td></tr><tr><td><span>couplets</span></td><td><span>对联</span></td></tr><tr><td><span>lucky money</span></td><td><span>红包</span></td></tr><tr><td><span>reunion dinner</span></td><td><span>年夜饭</span></td></tr><tr><td><span>New Year&#39;s Eve</span></td><td><span>除夕</span></td></tr></tbody></table></figure><h3 id='80位置'><span>80.位置</span></h3><figure><table><thead><tr><th><span>英语</span></th><th><span>含义</span></th></tr></thead><tbody><tr><td><span>on</span></td><td><span>在上面</span></td></tr><tr><td><span>in</span></td><td><span>在里面</span></td></tr><tr><td><span>under</span></td><td><span>在下面</span></td></tr><tr><td><span>near</span></td><td><span>在旁边</span></td></tr><tr><td><span>between</span></td><td><span>在中间</span></td></tr><tr><td><span>in front of</span></td><td><span>在前面</span></td></tr><tr><td><span>behind</span></td><td><span>在后面</span></td></tr><tr><td><span>around</span></td><td><span>在周围</span></td></tr></tbody></table></figure><h2 id='81-90'><span>81-90</span></h2><h3 id='81工资'><span>81.工资</span></h3><ul><li><span>salary：固定工资</span></li><li><span>wage：非固定工资，按工作量计算</span></li></ul><h2 id='实用口语'><span>实用口语</span></h2><figure><table><thead><tr><th><span>英语</span></th><th><span>翻译</span></th></tr></thead><tbody><tr><td><span>I do.</span></td><td><span>我愿意。</span></td></tr><tr><td><span>I like.</span></td><td><span>我喜欢。</span></td></tr><tr><td><span>I wish.</span></td><td><span>我希望。</span></td></tr><tr><td><span>I will.</span></td><td><span>我会的。</span></td></tr><tr><td><span>I know.</span></td><td><span>我知道。</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>Hand in hand</span></td><td><span>手牵手</span></td></tr><tr><td><span>Back to back</span></td><td><span>背靠背</span></td></tr><tr><td><span>Heart to heart</span></td><td><span>心连心</span></td></tr><tr><td><span>face to face</span></td><td><span>面对面</span></td></tr><tr><td><span>one by one</span></td><td><span>一个接一个</span></td></tr><tr><td><span>How much</span></td><td><span>多少钱</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>I&#39;m full</span></td><td><span>我饱了</span></td></tr><tr><td><span>I&#39;m home</span></td><td><span>我回来了</span></td></tr><tr><td><span>I&#39;m lost</span></td><td><span>我迷路了</span></td></tr><tr><td><span>This way</span></td><td><span>这边请</span></td></tr><tr><td><span>Follow me</span></td><td><span>跟着我</span></td></tr><tr><td><span>so do I</span></td><td><span>我也一样</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>got a second</span></td><td><span>有空吗</span></td></tr><tr><td><span>my treat</span></td><td><span>我请客</span></td></tr><tr><td><span>catch you later</span></td><td><span>等会见</span></td></tr><tr><td><span>I&#39;m good to go</span></td><td><span>我准备好了</span></td></tr><tr><td><span>I&#39;m on my way</span></td><td><span>我马上到</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>my bad</span></td><td><span>我的错</span></td></tr><tr><td><span>my treat</span></td><td><span>我请客</span></td></tr><tr><td><span>my honor</span></td><td><span>我的荣耀</span></td></tr><tr><td><span>my turn</span></td><td><span>轮到我了</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>slow down</span></td><td><span>慢一点</span></td></tr><tr><td><span>watch your step</span></td><td><span>小心脚下</span></td></tr><tr><td><span>sit still</span></td><td><span>坐好</span></td></tr><tr><td><span>have a few more bites</span></td><td><span>多吃一点</span></td></tr><tr><td><span>time to sleep</span></td><td><span>该睡觉了</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>good second</span></td><td><span>有空吗</span></td></tr><tr><td><span>It&#39;s my treat</span></td><td><span>我请客</span></td></tr><tr><td><span>catch you later</span></td><td><span>晚点见</span></td></tr><tr><td><span>I&#39;m good to go</span></td><td><span>我准备好了</span></td></tr><tr><td><span>I&#39;m on my way</span></td><td><span>我马上就到了</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>You are nice.</span></td><td><span>你太好了</span></td></tr><tr><td><span>You are great.</span></td><td><span>你太棒了</span></td></tr><tr><td><span>You are beautiful.</span></td><td><span>你真漂亮</span></td></tr><tr><td><span>You are right.</span></td><td><span>你是对的</span></td></tr><tr><td><span>You are wrong.</span></td><td><span>你是错的</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>Well done.</span></td><td><span>干得好</span></td></tr><tr><td><span>Not bed.</span></td><td><span>还不错</span></td></tr><tr><td><span>After you.</span></td><td><span>你先请</span></td></tr><tr><td><span>You wish.</span></td><td><span>想得美</span></td></tr><tr><td><span>So what.</span></td><td><span>那又怎么样</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>Where did you grow up?</span></td><td><span>你在哪里长大</span></td></tr><tr><td><span>Do you have any pets?</span></td><td><span>你有宠物吗</span></td></tr><tr><td><span>What&#39;s you favorite food?</span></td><td><span>你最喜欢吃什么</span></td></tr><tr><td><span>What do you like to do in your free time?</span></td><td><span>你空闲的时候喜欢做什么</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>Are you home?</span></td><td><span>你在家吗</span></td></tr><tr><td><span>Are you hungry?</span></td><td><span>你饿了吗</span></td></tr><tr><td><span>Are you cold?</span></td><td><span>你冷吗</span></td></tr><tr><td><span>Are you busy?</span></td><td><span>你忙吗</span></td></tr><tr><td><span>Are you ready?</span></td><td><span>你准备好了吗</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>Do your homweork.</span></td><td><span>写作业</span></td></tr><tr><td><span>Make the bed.</span></td><td><span>整理床铺</span></td></tr><tr><td><span>Pack your bag.</span></td><td><span>整理书包</span></td></tr><tr><td><span>Tidy your room.</span></td><td><span>整理房间</span></td></tr></tbody></table></figure></div></div>
+</body>
+</html>

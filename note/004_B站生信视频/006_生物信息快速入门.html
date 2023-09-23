@@ -1,0 +1,1387 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<script src="https://note.ilulj.top/script/script.js"></script>
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+
+</style><title>006_生物信息快速入门</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='生物信息快速入门'><span>生物信息快速入门</span></h1><ul><li><span>B站UP主：</span><a href='https://space.bilibili.com/404172354'><span>基因学苑</span></a><span> </span></li><li><span>视频链接：</span><a href='https://www.bilibili.com/video/BV1C4411w7jM/'><span>生物信息快速入门</span></a><span> </span></li></ul><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#生物信息快速入门">生物信息快速入门</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n7"><a class="md-toc-inner" href="#测序原理">测序原理</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n29"><a class="md-toc-inner" href="#建库测序">建库测序</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n51"><a class="md-toc-inner" href="#cluster">cluster</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n52"><a class="md-toc-inner" href="#上机测序">上机测序</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n60"><a class="md-toc-inner" href="#大片段文库">大片段文库</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n85"><a class="md-toc-inner" href="#测序原理faq">测序原理FAQ</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n104"><a class="md-toc-inner" href="#fastq文件">fastq文件</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n127"><a class="md-toc-inner" href="#测序饱和度评估">测序饱和度评估</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n142"><a class="md-toc-inner" href="#测序数据质控">测序数据质控</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n173"><a class="md-toc-inner" href="#测序数据处理">测序数据处理</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n202"><a class="md-toc-inner" href="#短序列比对">短序列比对</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n248"><a class="md-toc-inner" href="#短序列比对的作用">短序列比对的作用</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n277"><a class="md-toc-inner" href="#短序列比对常用软件">短序列比对常用软件</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n342"><a class="md-toc-inner" href="#sam文件格式">sam文件格式</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n374"><a class="md-toc-inner" href="#估计insertsize">估计insertsize</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n384"><a class="md-toc-inner" href="#rnaseq基因差异表达">RNAseq基因差异表达</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n407"><a class="md-toc-inner" href="#变异检测">变异检测</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n423"><a class="md-toc-inner" href="#物种组成与丰度分析">物种组成与丰度分析</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n424"><a class="md-toc-inner" href="#短序列比对faq">短序列比对FAQ</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n464"><a class="md-toc-inner" href="#kmer估计基因组大小">kmer估计基因组大小</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n483"><a class="md-toc-inner" href="#序列拼接">序列拼接</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n520"><a class="md-toc-inner" href="#pregraph">pregraph</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n547"><a class="md-toc-inner" href="#构建contig">构建contig</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n581"><a class="md-toc-inner" href="#构建scaffold">构建scaffold</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n613"><a class="md-toc-inner" href="#序列补洞">序列补洞</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n629"><a class="md-toc-inner" href="#序列拼接软件">序列拼接软件</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n662"><a class="md-toc-inner" href="#基因组污染分析">基因组污染分析</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n694"><a class="md-toc-inner" href="#rnaseg与meta序列拼接">RNAseg与meta序列拼接</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n719"><a class="md-toc-inner" href="#序列拼接faq">序列拼接FAQ</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n761"><a class="md-toc-inner" href="#基因组分析介绍">基因组分析介绍</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n766"><a class="md-toc-inner" href="#基因预测">基因预测</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n792"><a class="md-toc-inner" href="#基因功能注释">基因功能注释</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n807"><a class="md-toc-inner" href="#非编码rna分析">非编码RNA分析</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n832"><a class="md-toc-inner" href="#小rna分析">小RNA分析</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n852"><a class="md-toc-inner" href="#重复序列分析">重复序列分析</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n893"><a class="md-toc-inner" href="#基因组特殊元件分析">基因组特殊元件分析</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n910"><a class="md-toc-inner" href="#共线性分析">共线性分析</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n921"><a class="md-toc-inner" href="#在线序列分析">在线序列分析</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n929"><a class="md-toc-inner" href="#序列比对概述">序列比对概述</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n963"><a class="md-toc-inner" href="#局部比对与全局比对">局部比对与全局比对</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n982"><a class="md-toc-inner" href="#多序列比对">多序列比对</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1016"><a class="md-toc-inner" href="#变异检测概述">变异检测概述</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1048"><a class="md-toc-inner" href="#snp检测">SNP检测</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1075"><a class="md-toc-inner" href="#sv检测">SV检测</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1092"><a class="md-toc-inner" href="#corepangene集构建">CorePanGene集构建</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1113"><a class="md-toc-inner" href="#变异检测软件">变异检测软件</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1182"><a class="md-toc-inner" href="#系统发育树构建">系统发育树构建</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1225"><a class="md-toc-inner" href="#高通量数据分析faq">高通量数据分析FAQ</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1240"><a class="md-toc-inner" href="#数据下载">数据下载</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1286"><a class="md-toc-inner" href="#ncbi数据上传">NCBI数据上传</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1296"><a class="md-toc-inner" href="#配套服务器的使用教程">配套服务器的使用教程</a></span></p></div><h2 id='测序原理'><span>测序原理</span></h2><ul><li><p><span>illumina测序的优势：</span></p><ul><li><span>可逆阻断终止技术</span></li><li><span>边合成边测序</span></li><li><span>双末端测序</span></li></ul></li><li><p><span>样品要求：</span></p><ul><li><span>最好为单倍体</span></li><li><span>达到DNA纯度要求OD值</span></li><li><span>样品未降解</span></li><li><span>样品量满足建库要求</span></li></ul></li></ul><h2 id='建库测序'><span>建库测序</span></h2><ul><li><span>文库：就是DNA片段的一个集合，将测序片段打断之后就构成了一个DNA文库。</span></li></ul><p><img src="img\006_生物信息快速入门\001.png" alt="001" style="zoom: 40%;" /></p><ul><li><span>构建文库进行随机打断，1000一下为小片段文库，此时的长度指的是峰值出的长度。</span></li></ul><p><img src="img\006_生物信息快速入门\002.png" alt="002" style="zoom:33%;" /></p><ul><li><span>在3’端添加A碱基（便于连接引物），之后连接上引物，添加index标签，用于区分不同的物种。添加adapter接头（P5、P7），此接头与测序芯片的接头互补配对。</span></li></ul><p><img src="img\006_生物信息快速入门\003.png" alt="003" style="zoom:33%;" /></p><p><img src="img\006_生物信息快速入门\004.png" alt="004" style="zoom: 33%;" /></p><ul><li><span>测序芯片：flowcell</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\005.png" referrerpolicy="no-referrer" alt="005"></th><th><img src="img\006_生物信息快速入门\006.png" referrerpolicy="no-referrer" alt="006"></th></tr></thead><tbody></tbody></table></figure><p><img src="img\006_生物信息快速入门\007.png" alt="007" style="zoom:50%;" /></p><h2 id='cluster'><span>cluster</span></h2><h2 id='上机测序'><span>上机测序</span></h2><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\008.png" referrerpolicy="no-referrer" alt="008"></th><th><img src="img\006_生物信息快速入门\009.png" referrerpolicy="no-referrer" alt="009"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\010.png" referrerpolicy="no-referrer" alt="010"></td><td><img src="img\006_生物信息快速入门\011.png" referrerpolicy="no-referrer" alt="011"></td></tr></tbody></table></figure><h2 id='大片段文库'><span>大片段文库</span></h2><ul><li><p><span>大片段文库一般是指文库片段长度大于1K的片段，1k 以下普遍称为小片段文库。</span></p></li><li><p><span>大片段测序的目的：获得reads之间的物理距离关系。</span></p></li><li><p><span>问题：</span></p><ul><li><span>无法PCR太长的片段</span></li><li><span>只测序很短的序列，合成大片段浪费</span></li></ul></li><li><p><span>小片段文库为pairend，大片段文库为matepair</span></p></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\012.png" referrerpolicy="no-referrer" alt="012"></th><th><img src="img\006_生物信息快速入门\013.png" referrerpolicy="no-referrer" alt="013"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\014.png" referrerpolicy="no-referrer" alt="014"></td><td><img src="img\006_生物信息快速入门\015.png" referrerpolicy="no-referrer" alt="015"></td></tr><tr><td><img src="img\006_生物信息快速入门\016.png" referrerpolicy="no-referrer" alt="016"></td><td><img src="img\006_生物信息快速入门\017.png" referrerpolicy="no-referrer" alt="017"></td></tr></tbody></table></figure><h2 id='测序原理faq'><span>测序原理FAQ</span></h2><ul><li><p><span>为什么不能完整的测序基因组：</span></p><ul><li><span>提取出来的基因组不是完整的一条，断裂成很多片段</span></li><li><span>测序当中使用了PCR，限制了读长</span></li></ul></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\018.png" referrerpolicy="no-referrer" alt="018"></th><th><img src="img\006_生物信息快速入门\019.png" referrerpolicy="no-referrer" alt="019"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\020.png" referrerpolicy="no-referrer" alt="020"></td><td><img src="img\006_生物信息快速入门\021.png" referrerpolicy="no-referrer" alt="021"></td></tr><tr><td><img src="img\006_生物信息快速入门\022.png" referrerpolicy="no-referrer" alt="022"></td><td>&nbsp;</td></tr></tbody></table></figure><h2 id='fastq文件'><span>fastq文件</span></h2><p><img src="img\006_生物信息快速入门\023.png" alt="023" style="zoom:50%;" /></p><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\024.png" referrerpolicy="no-referrer" alt="024"></th><th><img src="img\006_生物信息快速入门\025.png" referrerpolicy="no-referrer" alt="025"></th></tr></thead><tbody></tbody></table></figure><ul><li><span>fasta的质量文件与序列文件的碱基一一对应，值越大，质量越高。</span></li></ul><p><img src="img\006_生物信息快速入门\026.png" alt="026" style="zoom:50%;" /></p><ul><li><span>fastq为上面两个文件的合并。</span></li></ul><p><img src="img\006_生物信息快速入门\027.png" alt="027" style="zoom:50%;" /></p><ul><li><p><span>质量表示有两种：</span></p><ul><li><span>ASCII码 - 64</span><strong><span>（Phred64）</span></strong><span>：+64一方面的原因是@的ASCII为64，小于33的ASCII是一些非字符的。辨别，如果都是字母，一般是-64。</span></li><li><span>ASCII码 - 33</span><strong><span>（Phred33）</span></strong><span>：辨别，如果有@等其他较为奇怪的字符，一般是-33。</span></li></ul></li></ul><p><img src="img\006_生物信息快速入门\028.png" alt="028" style="zoom:50%;" /></p><h2 id='测序饱和度评估'><span>测序饱和度评估</span></h2><ul><li><span>饱和度用于推出测序所需的数据量。</span></li></ul><p><img src="img\006_生物信息快速入门\029.png" alt="029" style="zoom: 50%;" /></p><ul><li><p><span>测序不饱和的影响：</span></p><ul><li><span>对于DNA基因组测序来说，如果测序不饱和影响序列拼接</span></li><li><span>RNAseg定量不准</span></li><li><span>宏基因组不能准确反映物种的组成</span></li></ul></li></ul><h2 id='测序数据质控'><span>测序数据质控</span></h2><ul><li><p><span>数据质控的指标：</span></p><ul><li><span>碱基含量分布</span></li><li><span>碱基质量分布</span></li></ul></li><li><p><span>测序数据与基因组GC含量一致：</span></p><ul><li><span>GC含量表示测序数据中ATCG四种碱基分布</span></li><li><span>ATCG含量恒定，与基因组碱基分布一致</span></li><li><span>测序随机均匀，ATCG同时倍增</span></li></ul></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\030.png" referrerpolicy="no-referrer" alt="030"></th><th><img src="img\006_生物信息快速入门\031.png" referrerpolicy="no-referrer" alt="031"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\032.png" referrerpolicy="no-referrer" alt="032"></td><td><img src="img\006_生物信息快速入门\033.png" referrerpolicy="no-referrer" alt="033"></td></tr></tbody></table></figure><p><img src="img\006_生物信息快速入门\034.png" alt="034" style="zoom:50%;" /></p><ul><li><span>打开官网：</span><a href='https://www.bioinformatics.babraham.ac.uk/projects/fastqc/' target='_blank' class='url'>https://www.bioinformatics.babraham.ac.uk/projects/fastqc/</a></li><li><span>查看各个测序仪的分析，如illumina：</span><a href='https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html'><span>Good Illumina Data</span></a><span>、</span><a href='https://www.bioinformatics.babraham.ac.uk/projects/fastqc/bad_sequence_fastqc.html'><span>Bad Illumina Data</span></a><span> </span></li></ul><h2 id='测序数据处理'><span>测序数据处理</span></h2><ul><li><p><span>去除非“基因组”本身序列：</span></p><ul><li><span>adapter接头</span></li><li><span>测序引物</span></li><li><span>barcode</span></li><li><span>index等</span></li></ul></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\035.png" referrerpolicy="no-referrer" alt="035"></th><th><img src="img\006_生物信息快速入门\036.png" referrerpolicy="no-referrer" alt="036"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\037.png" referrerpolicy="no-referrer" alt="037"></td><td><img src="img\006_生物信息快速入门\038.png" referrerpolicy="no-referrer" alt="038"></td></tr><tr><td><img src="img\006_生物信息快速入门\039.png" referrerpolicy="no-referrer" alt="039"></td><td><img src="img\006_生物信息快速入门\040.png" referrerpolicy="no-referrer" alt="040"></td></tr><tr><td><img src="img\006_生物信息快速入门\041.png" referrerpolicy="no-referrer" alt="041"></td><td><img src="img\006_生物信息快速入门\042.png" referrerpolicy="no-referrer" alt="042"></td></tr><tr><td><img src="img\006_生物信息快速入门\043.png" referrerpolicy="no-referrer" alt="043"></td><td><img src="img\006_生物信息快速入门\044.png" referrerpolicy="no-referrer" alt="044"></td></tr></tbody></table></figure><h2 id='短序列比对'><span>短序列比对</span></h2><ul><li><p><span>短序列比对就是将这些测序的reads重新定位到基因组上，这个过程也叫做回贴或者叫做mapping。</span></p></li><li><p><span>数据集：</span></p><ul><li><span>基因组(或者基因集 )，fasta格式、核酸，可以为全基因组，基因集，rRNA等</span></li><li><span>测序短reads (PE或者SE)，fastq格式</span></li></ul></li><li><p><span>illumina测序数据特点：</span></p><ul><li><span>测序覆盖全基因组</span></li><li><span>测序数据读长短</span></li><li><span>测序数据具有一定的错误率</span></li><li><span>测序数据深度高</span></li><li><span>测序数据具有pair-end关系</span></li></ul></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\045.png" referrerpolicy="no-referrer" alt="045"></th><th><img src="img\006_生物信息快速入门\046.png" referrerpolicy="no-referrer" alt="046"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\047.png" referrerpolicy="no-referrer" alt="047"></td><td><img src="img\006_生物信息快速入门\048.png" referrerpolicy="no-referrer" alt="048"></td></tr><tr><td><img src="img\006_生物信息快速入门\049.png" referrerpolicy="no-referrer" alt="049"></td><td>&nbsp;</td></tr></tbody></table></figure><ul><li><p><span>PE与SE比对：</span></p><ul><li><span>两条reads同时比对到同一序列(pairend 比对</span></li><li><span>只有一条reads比对上目标序列 (single比对 )</span></li><li><span>两条reads比对到不同序列  single比对)</span></li><li><span>两条reads比对超出insertsize范围 (single比对 )</span></li></ul></li></ul><h2 id='短序列比对的作用'><span>短序列比对的作用</span></h2><ul><li><p><span>与自身基因组比对：</span></p><ul><li><span>计算每个位点覆盖深度</span></li><li><span>计算参考序列覆盖比率</span></li></ul></li><li><p><span>与参考基因组比对：</span></p><ul><li><span>RNA测序计算基因表达量</span></li><li><span>宏基因组测序计算不同生物的丰度</span></li><li><span>变异检测</span></li></ul></li><li><p><span>reads利用率为比对到目标序列的reads与reads总数的比例。</span>
+<span>reads利用率=比对上的reads数/总reads数</span></p></li><li><p><span>覆盖深度，Coverage depth ，也简称为覆盖度，也叫乘数是指每个碱基被测序的平均次数，是用来衡量测序量的首要参数。</span></p></li><li><p><span>覆盖比率，Coverage ratio，也简称覆盖率，指被测序到的碱基占全基因组大小的比率。</span></p></li></ul><p><img src="img\006_生物信息快速入门\050.png" alt="050" style="zoom:50%;" /></p><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\051.png" referrerpolicy="no-referrer" alt="051"></th><th><img src="img\006_生物信息快速入门\052.png" referrerpolicy="no-referrer" alt="052"></th></tr></thead><tbody></tbody></table></figure><h2 id='短序列比对常用软件'><span>短序列比对常用软件</span></h2><ul><li><p><span>常用算法：</span></p><ul><li><span>空位种子片段索引法</span></li><li><span>Burrows Wheeler转换法</span></li><li><span>Smith-Waterman动态规划算法</span></li></ul></li><li><p><span>数据：</span></p><ul><li><span>基因组(或者基因集 )，fasta格式、核酸，可以为全基因组，基因集，rRNA等</span></li><li><span>测序短reads (PE或者SE)，fastq格式</span></li></ul></li><li><p><span>过程：</span></p><ol start='' ><li><span>对目标序列fasta文件建立索引</span></li><li><span>进行短序列比对</span></li></ol></li><li><p><span>软件：</span></p><ul><li><p><span>BWA：BWA的名字来源于使用bwt算法的aligner工具。</span></p><ol start='' ><li><span>对参考序列建立索引（bwa index）</span></li><li><span>对每条reads建立索引文件（bwa aln）</span></li><li><span>sample比对（bwa sample）</span></li></ol><p><img src="img\006_生物信息快速入门\053.png" referrerpolicy="no-referrer" alt="053"></p></li><li><p><span>SOAP：</span></p><ol start='' ><li><span>建立索引（2bwt-builder）</span></li><li><span>soap比对</span></li></ol><p><img src="img\006_生物信息快速入门\054.png" referrerpolicy="no-referrer" alt="054"></p></li><li><p><span>bowtie：bowtie应用于RNAseg分析</span></p><ul><li><span>bowtie+Tophat+Cufflinks</span></li></ul><p><img src="img\006_生物信息快速入门\055.png" referrerpolicy="no-referrer" alt="055"></p></li></ul></li><li><p><span>短序列比对注意事项：</span></p><ul><li><span>设置insertsize</span></li><li><span>控制错配数</span></li><li><span>控制容gap数</span></li><li><span>监控内存消耗</span></li><li><span>多线程提高比对效率</span></li></ul></li></ul><h2 id='sam文件格式'><span>sam文件格式</span></h2><ul><li><p><strong><span>SAM</span></strong><span>是一种序列比对格式标准，它的全称是</span><strong><span>(The Sequence Alignment/Map(SAM) format</span></strong><span> )，由sanger制定。是以TAB为分割符的文本格式。主要应用于测序序列mapping到基因组上的结果表示，当然也可以表示任意的多重比对结果。</span></p></li><li><p><strong><span>bam</span></strong><span>为</span><strong><span>sam</span></strong><span>文件的二进制压缩格式。</span></p></li><li><p><span>sam可以直接打开查看，而bam文件没有办法，需要借助samtools等工具。</span></p></li><li><p><span>sam文件分为两部分：</span></p><ul><li><span>注释信息：可有可无，以@开头</span></li></ul><p><img src="img\006_生物信息快速入门\056.png" alt="056" style="zoom: 25%;" /></p><p><img src="img\006_生物信息快速入门\057.png" alt="057" style="zoom: 25%;" /></p><ul><li><span>比对结果：</span></li></ul><p><img src="img\006_生物信息快速入门\058.png" alt="058" style="zoom:33%;" /></p><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\059.png" referrerpolicy="no-referrer" alt="059"></th><th><img src="img\006_生物信息快速入门\060.png" referrerpolicy="no-referrer" alt="060"></th></tr></thead><tbody></tbody></table></figure><ul><li><span>如果flag不是以上的数字，则是以上数字的组合的和。</span></li></ul><p><img src="img\006_生物信息快速入门\061.png" referrerpolicy="no-referrer" alt="061"></p><p><img src="img\006_生物信息快速入门\062.png" referrerpolicy="no-referrer" alt="062"></p><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\063.png" referrerpolicy="no-referrer" alt="063"></th><th><img src="img\006_生物信息快速入门\064.png" referrerpolicy="no-referrer" alt="064"></th></tr></thead><tbody></tbody></table></figure></li></ul><h2 id='估计insertsize'><span>估计insertsize</span></h2><ul><li><span>利用短序列比对估计插入语片段的大小（insertsize）</span></li><li><span>插入片段insertsize大小，也就是文库片段的长度同样也是两条测序reads的物理距离</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\065.png" referrerpolicy="no-referrer" alt="065"></th><th><img src="img\006_生物信息快速入门\066.png" referrerpolicy="no-referrer" alt="066"></th></tr></thead><tbody></tbody></table></figure><h2 id='rnaseq基因差异表达'><span>RNAseq基因差异表达</span></h2><p><img src="img\006_生物信息快速入门\067.png" alt="067" style="zoom: 33%;" /></p><ul><li><span>对比表达量的时候，需要考虑基因的长度，不同的测序深度。</span></li><li><span>RPKM无法解决存在可变剪接的问题，无法计算这一部分的表达量。</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\068.png" referrerpolicy="no-referrer" alt="068"></th><th><img src="img\006_生物信息快速入门\069.png" referrerpolicy="no-referrer" alt="069"></th></tr></thead><tbody></tbody></table></figure><ul><li><p><span>比较基因差异表达的标准：</span></p><ul><li><span>fold change（FC）</span></li><li><span>通过FDR校正</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\070.png" referrerpolicy="no-referrer" alt="070"></th><th><img src="img\006_生物信息快速入门\071.png" referrerpolicy="no-referrer" alt="071"></th></tr></thead><tbody></tbody></table></figure></li></ul><h2 id='变异检测'><span>变异检测</span></h2><p><img src="img\006_生物信息快速入门\072.png" alt="072" style="zoom: 33%;" /></p><ul><li><span>单碱基变化表现：错配和gap</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\073.png" referrerpolicy="no-referrer" alt="073"></th><th><img src="img\006_生物信息快速入门\074.png" referrerpolicy="no-referrer" alt="074"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\075.png" referrerpolicy="no-referrer" alt="075"></td><td><img src="img\006_生物信息快速入门\076.png" referrerpolicy="no-referrer" alt="076"></td></tr><tr><td><img src="img\006_生物信息快速入门\077.png" referrerpolicy="no-referrer" alt="077"></td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h2 id='物种组成与丰度分析'><span>物种组成与丰度分析</span></h2><h2 id='短序列比对faq'><span>短序列比对FAQ</span></h2><ul><li><p><span>建立索引错误：</span></p><ul><li><span>目标序列不能太短，否则无法建立索引；</span></li><li><span>序列文件中不要有回车符；</span></li><li><span>选择正确的bwa index 选项；</span></li></ul></li><li><p><span>短序列比对的资源消耗：使用bam来减少数据存储</span></p></li><li><p><span>如何提高比对的效率：</span></p><ul><li><span>完善软件的算法；</span></li><li><span>提高计算机硬件资源；</span></li><li><span>比对前要对数据进行处理；</span></li><li><span>通过数据拆分合并提高比对效率；</span></li></ul></li><li><p><span>matepair文库：</span></p><ul><li><span>soap比对中要加-R选项</span></li><li><span>bowtie比对中要加--fr或者--rf，--ff等选项来指明read的方向</span></li></ul></li><li><p><span>短序列比对与长序列比对之间的差别：</span></p><ul><li><span>长序列是比对多少的问题，短系列是比对有无的问题</span></li><li><span>长序列可以容许更多的gap和错配</span></li><li><span>亲缘关系太远无法使用短序列比对结果不好</span></li></ul></li></ul><h2 id='kmer估计基因组大小'><span>kmer估计基因组大小</span></h2><ul><li><span>获取基因组大小的数据库网站：</span><a href='http://www.genomesize.com/search.php' target='_blank' class='url'>http://www.genomesize.com/search.php</a></li><li><span>kmer：所谓k-mer，即为一段短的DNA片段。K为一个奇数，k等于几，就称为几mer。</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\078.png" referrerpolicy="no-referrer" alt="078"></th><th><img src="img\006_生物信息快速入门\079.png" referrerpolicy="no-referrer" alt="079"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\080.png" referrerpolicy="no-referrer" alt="080"></td><td><img src="img\006_生物信息快速入门\081.png" referrerpolicy="no-referrer" alt="081"></td></tr><tr><td><img src="img\006_生物信息快速入门\082.png" referrerpolicy="no-referrer" alt="082"></td><td><img src="img\006_生物信息快速入门\083.png" referrerpolicy="no-referrer" alt="083"></td></tr><tr><td><img src="img\006_生物信息快速入门\084.png" referrerpolicy="no-referrer" alt="084"></td><td><img src="img\006_生物信息快速入门\085.png" referrerpolicy="no-referrer" alt="085"></td></tr></tbody></table></figure><h2 id='序列拼接'><span>序列拼接</span></h2><ul><li><span>高通量测序的两条路线：短序列比对和序列拼接。</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\086.png" referrerpolicy="no-referrer" alt="086"></th><th><img src="img\006_生物信息快速入门\087.png" referrerpolicy="no-referrer" alt="087"></th></tr></thead><tbody></tbody></table></figure><ul><li><p><span>序列拼接存在的问题：</span></p><ul><li><span>两条序列的方向</span></li><li><span>overlap的大小</span></li><li><span>overlap之间存在错配</span></li><li><span>一条序列与多条序列之间存在overlap</span></li><li><span>连接之后是否可以继续连接</span></li></ul></li><li><p><span>序列拼接相关名词：</span></p><ul><li><span>reads</span></li><li><span>pairend（小片段）与matepair（大片段）</span></li><li><span>insertsize</span></li><li><span>kmer：将reads切割成的小片段</span></li><li><span>contig：kmer/reads之间连接而成的长片段</span></li><li><span>scaffold：contig之间的连接而成</span></li></ul></li></ul><h2 id='pregraph'><span>pregraph</span></h2><ul><li><p><span>序列拼接可用数据：</span></p><ul><li><span>两条pairend关系reads</span></li><li><span>reads之间具有overlap</span></li><li><span>reads之间具有pairend关系</span></li></ul></li></ul><p><img src="img\006_生物信息快速入门\088.png" alt="088" style="zoom:33%;" /></p><ul><li><p><span>短序列拼接的步骤：</span></p><ul><li><span>构图</span></li><li><span>构建contig</span></li><li><span>构建scaffold (包括map)</span></li><li><span>补洞</span></li></ul></li><li><p><span>为什么要切kmer：因为测序中存在错误。去掉kmer频数为1的。</span></p></li></ul><p><img src="img\006_生物信息快速入门\089.png" alt="089" style="zoom:33%;" /></p><h2 id='构建contig'><span>构建contig</span></h2><ul><li><span>在去掉低频率的kmer后，得到一个相对稳定的kmer集合。</span></li><li><span>两个kmer之间必须有n-1个overlap才可以进行连接。</span></li></ul><p><img src="img\006_生物信息快速入门\090.png" alt="090" style="zoom:33%;" /></p><ul><li><p><span>常见名词：</span></p><ul><li><span>图中每个kmer为一个node。</span></li><li><span>node之间的连接为一个edge。</span></li><li><span>无法继续连接下去的端点称为一个tips。</span></li><li><span>kmer的连接出现分支，之后分支又连接到一起称为bubble。</span></li></ul></li><li><p><span>简化De bruijin图</span></p></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\091.png" referrerpolicy="no-referrer" alt="091"></th><th><img src="img\006_生物信息快速入门\092.png" referrerpolicy="no-referrer" alt="092"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\093.png" referrerpolicy="no-referrer" alt="093"></td><td><img src="img\006_生物信息快速入门\094.png" referrerpolicy="no-referrer" alt="094"></td></tr><tr><td><img src="img\006_生物信息快速入门\095.png" referrerpolicy="no-referrer" alt="095"></td><td><img src="img\006_生物信息快速入门\096.png" referrerpolicy="no-referrer" alt="096"></td></tr><tr><td><img src="img\006_生物信息快速入门\097.png" referrerpolicy="no-referrer" alt="097"></td><td>&nbsp;</td></tr></tbody></table></figure><h2 id='构建scaffold'><span>构建scaffold</span></h2><ul><li><span>通过reads之间的pairend(或matepair)关系，将contig连接成更长的序列我们称为scaffold。</span></li><li><span>contig之间没有overlap的关系。</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\098.png" referrerpolicy="no-referrer" alt="098"></th><th><img src="img\006_生物信息快速入门\099.png" referrerpolicy="no-referrer" alt="099"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\100.png" referrerpolicy="no-referrer" alt="100"></td><td><img src="img\006_生物信息快速入门\101.png" referrerpolicy="no-referrer" alt="101"></td></tr></tbody></table></figure><ul><li><span>连接为scaffold之后还是有很多片段</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\102.png" referrerpolicy="no-referrer" alt="102"></th><th><img src="img\006_生物信息快速入门\103.png" referrerpolicy="no-referrer" alt="103"></th></tr></thead><tbody></tbody></table></figure><ul><li><span>接下来可以使用matepair确定scaffold之间的位置关系。</span></li></ul><p><img src="img\006_生物信息快速入门\104.png" alt="104" style="zoom:50%;" /></p><ul><li><p><span>总的来说，拼接策略：</span></p><ul><li><span>首先利用小片段文库</span></li><li><span>逐步加入大片段文库</span></li></ul></li></ul><h2 id='序列补洞'><span>序列补洞</span></h2><ul><li><span>gap：使用N表示</span></li></ul><p><img src="img\006_生物信息快速入门\105.png" alt="105" style="zoom:33%;" /></p><ul><li><span>N碱基数目不完全准确，N区域来自基因组复杂区域，不容易拼接出来。</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\106.png" referrerpolicy="no-referrer" alt="106"></th><th><img src="img\006_生物信息快速入门\107.png" referrerpolicy="no-referrer" alt="107"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\108.png" referrerpolicy="no-referrer" alt="108"></td><td><img src="img\006_生物信息快速入门\109.png" referrerpolicy="no-referrer" alt="109"></td></tr></tbody></table></figure><p><img src="img\006_生物信息快速入门\110.png" alt="110" style="zoom:33%;" /></p><h2 id='序列拼接软件'><span>序列拼接软件</span></h2><p><img src="img\006_生物信息快速入门\111.png" alt="111" style="zoom:33%;" /></p><ul><li><span>SOAPdenovo</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\112.png" referrerpolicy="no-referrer" alt="112"></th><th><img src="img\006_生物信息快速入门\113.png" referrerpolicy="no-referrer" alt="113"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\114.png" referrerpolicy="no-referrer" alt="114"></td><td><img src="img\006_生物信息快速入门\115.png" referrerpolicy="no-referrer" alt="115"></td></tr></tbody></table></figure><ul><li><span>velet</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\116.png" referrerpolicy="no-referrer" alt="116"></th><th><img src="img\006_生物信息快速入门\117.png" referrerpolicy="no-referrer" alt="117"></th></tr></thead><tbody></tbody></table></figure><ul><li><span>SPAdes</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\118.png" referrerpolicy="no-referrer" alt="118"></th><th><img src="img\006_生物信息快速入门\119.png" referrerpolicy="no-referrer" alt="119"></th></tr></thead><tbody></tbody></table></figure><ul><li><span>Newbler</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\120.png" referrerpolicy="no-referrer" alt="120"></th><th><img src="img\006_生物信息快速入门\121.png" referrerpolicy="no-referrer" alt="121"></th></tr></thead><tbody></tbody></table></figure><h2 id='基因组污染分析'><span>基因组污染分析</span></h2><ul><li><p><span>基因组污染特征：</span></p><ul><li><span>基因组明显偏大</span></li><li><span>序列丰度不同</span></li><li><span>GC异常</span></li></ul></li><li><p><span>序列唯一性：序列越长唯一性越高</span></p></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\122.png" referrerpolicy="no-referrer" alt="122"></th><th><img src="img\006_生物信息快速入门\123.png" referrerpolicy="no-referrer" alt="123"></th></tr></thead><tbody></tbody></table></figure><ul><li><p><span>污染鉴定：</span></p><ul><li><span>与NCBI比对进行鉴定</span></li><li><span>预测16s(或18s )进行鉴定</span></li></ul></li><li><p><span>污染处理：</span></p><ul><li><span>由于序列之间存在相似性，丰度存在交叉，无法准确区分开污染序列与正常序列</span></li><li><span>重新提取样品进行建库测序</span></li></ul></li></ul><h2 id='rnaseg与meta序列拼接'><span>RNAseg与meta序列拼接</span></h2><ul><li><p><span>DNA测序与RNAseq比较：</span></p><ul><li><span>DNA一般为全基因组测序，而RNA测序的是转录出来的转录本，都是独立断开的片段;</span></li><li><span>DNA测序一般是均匀测序，基因组上的区域被均匀覆盖，而RNA由于存在表达丰度的差异</span></li><li><span>DNA全基因组测序中存在很多重复序列，干扰序列的拼接，而转录组中这个问题影响会小一些</span></li></ul></li></ul><p><img src="img\006_生物信息快速入门\124.png" alt="124" style="zoom: 33%;" /></p><p><img src="img\006_生物信息快速入门\125.png" alt="125" style="zoom:50%;" /></p><ul><li><p><span>RNA拼接注意事项：</span></p><ul><li><span>拼接结果中获取Unigene</span></li><li><span>拼接时要去除duplication</span></li><li><span>表达定量时不能去除duplication</span></li></ul></li><li><p><span>宏基因组拼接：宏基因组(Metagenome)，也称微生物环境基因组MicrobialEnvironmental Genome,或元基因组。</span></p></li></ul><h2 id='序列拼接faq'><span>序列拼接FAQ</span></h2><ul><li><p><span>影响拼接的因素有那些：</span></p><ul><li><span>内因：多倍体，基因组杂合，高度重复，低复杂度，GC偏差等</span></li><li><span>外因：测序数据量，测序质量，文库大小，kmer大小，基因组自身，拼接软件，阈值设定</span></li></ul></li><li><p><span>如何改善拼接效果：</span></p><ul><li><span>覆盖基因组所有位点；</span></li><li><span>重新调整insertsize；</span></li><li><span>去除insertsize偏差大的pairend reads；</span></li><li><span>调整kmer大小以及软件选项参数阈值；</span></li><li><span>混合拼接</span></li></ul></li></ul><p><img src="img\006_生物信息快速入门\126.png" alt="126" style="zoom:33%;" /></p><ul><li><p><span>为什么不用短reads直接overlap拼接：</span></p><ul><li><span>reads中存在错误率:</span></li><li><span>通过kmer去除包含reads中错误的位点</span></li></ul></li><li><p><span>如何选择kmer的大小：</span></p><ul><li><span>reads准确度越高，选择大kmer较好</span></li><li><span>reads错误率高，选择小kmer，reads利用率高</span></li><li><span>基因组本身特点，重复率，测序深度等因素，都会对kmer取值造成一定影响</span></li></ul></li><li><p><span>为什么kmer只能是奇数：考虑回文序列</span></p></li></ul><h2 id='基因组分析介绍'><span>基因组分析介绍</span></h2><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\127.png" referrerpolicy="no-referrer" alt="127"></th><th><img src="img\006_生物信息快速入门\128.png" referrerpolicy="no-referrer" alt="128"></th></tr></thead><tbody></tbody></table></figure><h2 id='基因预测'><span>基因预测</span></h2><ul><li><p><span>基因预测方法：</span></p><ul><li><span>利用软件对物种基因组直接进行预测</span></li><li><span>通过同源序列比对，和已知近源物种基因集进行比对，将同源比对区筛选出来，作为基因。</span></li></ul></li><li><p><span>方法比较：</span></p><ul><li><span>从头预测：不需要同源参考基因序列直接进行预测，非常方便，适合于新发现的物种，没有很多已知的基因信息；</span></li><li><span>基于同源基因的序列比对：找出的基因则更加准确，但是如果没有同源序列，或者同源区不含有某个基因的话，就会漏掉一些基因。</span></li></ul></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\129.png" referrerpolicy="no-referrer" alt="129"></th><th><img src="img\006_生物信息快速入门\130.png" referrerpolicy="no-referrer" alt="130"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\131.png" referrerpolicy="no-referrer" alt="131"></td><td>&nbsp;</td></tr></tbody></table></figure><ul><li><span>宏基因组基因预测：宏基因组中包含原核生物、真核生物、病毒等，基因预测难度大。</span></li></ul><h2 id='基因功能注释'><span>基因功能注释</span></h2><ul><li><span>ENCODE计划</span></li><li><span>blast</span></li><li><span>差异表达基因GO功能显著性富集分析</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\132.png" referrerpolicy="no-referrer" alt="132"></th><th><img src="img\006_生物信息快速入门\133.png" referrerpolicy="no-referrer" alt="133"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\134.png" referrerpolicy="no-referrer" alt="134"></td><td><img src="img\006_生物信息快速入门\135.png" referrerpolicy="no-referrer" alt="135"></td></tr></tbody></table></figure><h2 id='非编码rna分析'><span>非编码RNA分析</span></h2><ul><li><p><span>RNA分类：</span></p><ul><li><span>Coding RNA，也就是我们经常说的mRNA</span></li><li><span>Non-CodingRNA，如核糖体RNA、转运RNA核仁RNA、小RNA 等</span></li></ul></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\136.png" referrerpolicy="no-referrer" alt="136"></th><th><img src="img\006_生物信息快速入门\137.png" referrerpolicy="no-referrer" alt="137"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\138.png" referrerpolicy="no-referrer" alt="138"></td><td><img src="img\006_生物信息快速入门\139.png" referrerpolicy="no-referrer" alt="139"></td></tr><tr><td><img src="img\006_生物信息快速入门\140.png" referrerpolicy="no-referrer" alt="140"></td><td><img src="img\006_生物信息快速入门\141.png" referrerpolicy="no-referrer" alt="141"></td></tr><tr><td><img src="img\006_生物信息快速入门\142.png" referrerpolicy="no-referrer" alt="142"></td><td><img src="img\006_生物信息快速入门\143.png" referrerpolicy="no-referrer" alt="143"></td></tr><tr><td><img src="img\006_生物信息快速入门\144.png" referrerpolicy="no-referrer" alt="144"></td><td><img src="img\006_生物信息快速入门\145.png" referrerpolicy="no-referrer" alt="145"></td></tr></tbody></table></figure><h2 id='小rna分析'><span>小RNA分析</span></h2><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\146.png" referrerpolicy="no-referrer" alt="146"></th><th><img src="img\006_生物信息快速入门\147.png" referrerpolicy="no-referrer" alt="147"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\148.png" referrerpolicy="no-referrer" alt="148"></td><td><img src="img\006_生物信息快速入门\149.png" referrerpolicy="no-referrer" alt="149"></td></tr><tr><td><img src="img\006_生物信息快速入门\150.png" referrerpolicy="no-referrer" alt="150"></td><td><img src="img\006_生物信息快速入门\151.png" referrerpolicy="no-referrer" alt="151"></td></tr><tr><td><img src="img\006_生物信息快速入门\152.png" referrerpolicy="no-referrer" alt="152"></td><td><img src="img\006_生物信息快速入门\153.png" referrerpolicy="no-referrer" alt="153"></td></tr><tr><td><img src="img\006_生物信息快速入门\154.png" referrerpolicy="no-referrer" alt="154"></td><td><img src="img\006_生物信息快速入门\155.png" referrerpolicy="no-referrer" alt="155"></td></tr><tr><td><img src="img\006_生物信息快速入门\156.png" referrerpolicy="no-referrer" alt="156"></td><td><img src="img\006_生物信息快速入门\157.png" referrerpolicy="no-referrer" alt="157"></td></tr></tbody></table></figure><h2 id='重复序列分析'><span>重复序列分析</span></h2><ul><li><p><span>重复序列可以简单分为散在重复和串联重复。</span></p></li><li><p><span>串联重复序列分类：</span></p><ul><li><span>卫星DNA ( satellites DNA )</span></li><li><span>小卫星 DNA(mimisatellites DNA)</span></li><li><span>微卫星DNA (microsatellites DNA )</span></li></ul></li><li><p><span>分散重复分类：</span></p><ul><li><span>LTR，长未端重复转座子(long terminal repeat)</span></li><li><span>LINE，长散在重复序列(ong interspersed nuclearelements)</span></li><li><span>SINE，为短散在重复序列(short interspersed nuclearelementsE)</span></li><li><span>DNA 转座子</span></li></ul></li><li><p><span>根据重复序列长度分类：</span></p><ul><li><span>高度重复序列</span></li><li><span>中度重复序列</span></li><li><span>低度重复序列</span></li></ul></li><li><p><span>重复序列分析方法：</span></p><ul><li><span>序列比对</span></li><li><span>从头预测两类</span></li></ul></li></ul><p><img src="img\006_生物信息快速入门\158.png" alt="158" style="zoom:33%;" /></p><h2 id='基因组特殊元件分析'><span>基因组特殊元件分析</span></h2><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\159.png" referrerpolicy="no-referrer" alt="159"></th><th>&nbsp;</th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\161.png" referrerpolicy="no-referrer" alt="161"></td><td><img src="img\006_生物信息快速入门\162.png" referrerpolicy="no-referrer" alt="162"></td></tr><tr><td><img src="img\006_生物信息快速入门\163.png" referrerpolicy="no-referrer" alt="163"></td><td><img src="img\006_生物信息快速入门\164.png" referrerpolicy="no-referrer" alt="164"></td></tr><tr><td><img src="img\006_生物信息快速入门\165.png" referrerpolicy="no-referrer" alt="165"></td><td><img src="img\006_生物信息快速入门\166.png" referrerpolicy="no-referrer" alt="166"></td></tr><tr><td><img src="img\006_生物信息快速入门\167.png" referrerpolicy="no-referrer" alt="167"></td><td><img src="img\006_生物信息快速入门\168.png" referrerpolicy="no-referrer" alt="168"></td></tr></tbody></table></figure><h2 id='共线性分析'><span>共线性分析</span></h2><ul><li><span>所谓共线性，顾名思义，表示二者在一条直线上。基因组的共线性分析也类似，主要是用一种线性图的方式来比较两个或者多个基因组是否具有较好的同源性。</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\169.png" referrerpolicy="no-referrer" alt="169"></th><th><img src="img\006_生物信息快速入门\171.png" referrerpolicy="no-referrer" alt="171"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\170.png" referrerpolicy="no-referrer" alt="170"></td><td>&nbsp;</td></tr></tbody></table></figure><h2 id='在线序列分析'><span>在线序列分析</span></h2><ul><li><span>BLAST</span></li><li><span>DAVID</span></li><li><span>RAST</span></li></ul><h2 id='序列比对概述'><span>序列比对概述</span></h2><ul><li><p><span>同源(homology): 是指来自于同一个祖先，两个物种从同一个祖先分化后，与不同的环境发生相互作用，其相应的DNA序列将各自发生一些替换或者插入缺失突变，也就是说序列不在精确相同。</span></p></li><li><p><span>相似性(similarity): 是指字符串的相似，并不具有生物学意义。</span></p></li><li><p><span>同源序列一般是相似的，相似序列不一定是同源的。</span></p></li><li><p><span>序列两两比对：</span></p><ul><li><span>两个碱基类型完全一致，没有发生变化。</span></li><li><span>碱基发生了变化，这种变化包括替换、插入和删除。</span></li></ul></li><li><p><span>比对算法：</span></p><ul><li><span>Needleman算法</span></li><li><span>Smith-Waterman算法</span></li><li><span>启发式联配算法等</span></li></ul></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\172.png" referrerpolicy="no-referrer" alt="172"></th><th><img src="img\006_生物信息快速入门\173.png" referrerpolicy="no-referrer" alt="173"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\174.png" referrerpolicy="no-referrer" alt="174"></td><td><img src="img\006_生物信息快速入门\175.png" referrerpolicy="no-referrer" alt="175"></td></tr><tr><td><img src="img\006_生物信息快速入门\176.png" referrerpolicy="no-referrer" alt="176"></td><td>&nbsp;</td></tr></tbody></table></figure><h2 id='局部比对与全局比对'><span>局部比对与全局比对</span></h2><ul><li><span>全局比对是用来衡量两条序列整体的相似性，满足整体相似性最大化。</span></li><li><span>局部比对则不同，两条亲缘关系较远的DNA或氨基酸可能只在一些片段上相似，这就需要找到这些相似性的片段，和其相应的匹配方式。</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\177.png" referrerpolicy="no-referrer" alt="177"></th><th><img src="img\006_生物信息快速入门\178.png" referrerpolicy="no-referrer" alt="178"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\179.png" referrerpolicy="no-referrer" alt="179"></td><td><img src="img\006_生物信息快速入门\180.png" referrerpolicy="no-referrer" alt="180"></td></tr><tr><td><img src="img\006_生物信息快速入门\181.png" referrerpolicy="no-referrer" alt="181"></td><td><img src="img\006_生物信息快速入门\182.png" referrerpolicy="no-referrer" alt="182"></td></tr><tr><td><img src="img\006_生物信息快速入门\183.png" referrerpolicy="no-referrer" alt="183"></td><td><img src="img\006_生物信息快速入门\184.png" referrerpolicy="no-referrer" alt="184"></td></tr></tbody></table></figure><h2 id='多序列比对'><span>多序列比对</span></h2><ul><li><p><span>多序列比对(Multiple sequence alignment;MSA )，是对三个以上的生物学序列，如蛋白质序列、DNA序列或RNA序列所作的序列比对。</span></p></li><li><p><span>构建多序列比对模型方法：</span></p><ul><li><span>手工比对方法</span></li><li><span>同步法</span></li><li><span>渐进法</span></li></ul></li></ul><p><img src="img\006_生物信息快速入门\185.png" alt="185" style="zoom: 33%;" /></p><ul><li><p><span>多序列比对特点：</span></p><ul><li><span>多序列比对一般都是将所有的序列放在同一个文件中</span></li><li><span>每一个样品都会对整体造成很大的影响</span></li><li><span>序列之间要具有同源关系，并且具有同一方向</span></li></ul></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\186.png" referrerpolicy="no-referrer" alt="186"></th><th><img src="img\006_生物信息快速入门\187.png" referrerpolicy="no-referrer" alt="187"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\188.png" referrerpolicy="no-referrer" alt="188"></td><td><img src="img\006_生物信息快速入门\189.png" referrerpolicy="no-referrer" alt="189"></td></tr><tr><td><img src="img\006_生物信息快速入门\190.png" referrerpolicy="no-referrer" alt="190"></td><td>&nbsp;</td></tr></tbody></table></figure><h2 id='变异检测概述'><span>变异检测概述</span></h2><ul><li><p><span>遗传就是子代在这个连续系统中重复亲代的特性和特征的现象。</span></p></li><li><p><span>基因组世代延绵的长期发展过程中，随着时间和空间的变化。结构改变了的基因使生物体发育不同于改变前的性状，于是出现了变异。</span></p></li><li><p><span>测序：</span></p><ul><li><span>Denovo测序：如果一个基因组第一次被测序出来，我们一般称为Denovo测序，主要是需要拼接其基因组</span></li><li><span>重测序：已有基因组被发表出来之后，重新测序新的数据，可以不需要护接，而直接用测序的reads进行短序列比对分析，称为重测序分析。在文献中常常会看到Re-sequencing这个词。其实重测序本质就是找变异。</span></li></ul></li><li><p><span>变异检测的意义：</span></p><ul><li><span>引起基因组的变化，进而导致基因型或者调控区的变化</span></li><li><span>根据基因型的变化推测与表型变化之间的关系</span></li><li><span>构建系统发育树，进行系统发育分析等</span></li></ul></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\191.png" referrerpolicy="no-referrer" alt="191"></th><th><img src="img\006_生物信息快速入门\192.png" referrerpolicy="no-referrer" alt="192"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\193.png" referrerpolicy="no-referrer" alt="193"></td><td><img src="img\006_生物信息快速入门\194.png" referrerpolicy="no-referrer" alt="194"></td></tr><tr><td><img src="img\006_生物信息快速入门\195.png" referrerpolicy="no-referrer" alt="195"></td><td><img src="img\006_生物信息快速入门\196.png" referrerpolicy="no-referrer" alt="196"></td></tr></tbody></table></figure><h2 id='snp检测'><span>SNP检测</span></h2><ul><li><p><span>SNP (single nucletide polymorphsysm )，即单核昔酸的多态性是指等位基因发生了突变致使不同等位型的出现。</span></p></li><li><p><span>SNP：</span></p><ul><li><span>纯合SNP：纯合SNP是指两个等位基因都发生了同样的突变</span></li><li><span>杂合SNP：杂合SNP是指两个等位基因中发生了不同的突变</span></li></ul></li><li><p><span>SNP的检测中一定要使同源序列的比对才有意义。</span></p></li><li><p><span>SNP检测方法：</span></p><ul><li><span>利用测序数据与参考序列进行短序列比对</span></li><li><span>利用序列拼接经过与参考序列进行比对</span></li></ul></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\197.png" referrerpolicy="no-referrer" alt="197"></th><th><img src="img\006_生物信息快速入门\198.png" referrerpolicy="no-referrer" alt="198"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\199.png" referrerpolicy="no-referrer" alt="199"></td><td><img src="img\006_生物信息快速入门\200.png" referrerpolicy="no-referrer" alt="200"></td></tr></tbody></table></figure><h2 id='sv检测'><span>SV检测</span></h2><ul><li><span>基因组结构变异SV是Structural Variation的简称。广义上来说，基因组上所有的变异都可以称为SV。而更狭义的概念，SV特指基因组大片段的插入与缺失。</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\201.png" referrerpolicy="no-referrer" alt="201"></th><th><img src="img\006_生物信息快速入门\202.png" referrerpolicy="no-referrer" alt="202"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\203.png" referrerpolicy="no-referrer" alt="203"></td><td><img src="img\006_生物信息快速入门\204.png" referrerpolicy="no-referrer" alt="204"></td></tr><tr><td><img src="img\006_生物信息快速入门\205.png" referrerpolicy="no-referrer" alt="205"></td><td><img src="img\006_生物信息快速入门\206.png" referrerpolicy="no-referrer" alt="206"></td></tr><tr><td><img src="img\006_生物信息快速入门\207.png" referrerpolicy="no-referrer" alt="207"></td><td>&nbsp;</td></tr></tbody></table></figure><h2 id='corepangene集构建'><span>CorePanGene集构建</span></h2><ul><li><span>Pan-genome: The global gene repertoire of a bacterial species</span></li><li><span>Core-genome: The pool of genes shared by all the strains of thesame bacterial species（类似于基因集的交集）</span></li><li><span>Dispensable genome: The pool of genes present in some but notall strains of the same bacterial species（类似于基因集的并集）</span></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\208.png" referrerpolicy="no-referrer" alt="208"></th><th><img src="img\006_生物信息快速入门\209.png" referrerpolicy="no-referrer" alt="209"></th></tr></thead><tbody><tr><td><img src="img\006_生物信息快速入门\210.png" referrerpolicy="no-referrer" alt="210"></td><td><img src="img\006_生物信息快速入门\211.png" referrerpolicy="no-referrer" alt="211"></td></tr><tr><td><img src="img\006_生物信息快速入门\212.png" referrerpolicy="no-referrer" alt="212"></td><td><img src="img\006_生物信息快速入门\213.png" referrerpolicy="no-referrer" alt="213"></td></tr><tr><td><img src="img\006_生物信息快速入门\214.png" referrerpolicy="no-referrer" alt="214"></td><td>&nbsp;</td></tr></tbody></table></figure><h2 id='变异检测软件'><span>变异检测软件</span></h2><ul><li><p><span>短序列比对：</span></p><ul><li><span>短序列比对生产sam文件</span></li><li><span>对sam或者bam格式文件进行处理</span></li></ul></li><li><p><span>soap方法：</span></p><ul><li><span>soap短序列比对</span></li><li><span>利用soapsnp进行SNP检测</span></li><li><span>利用soapindel进行InDel检测</span></li><li><span>利用soapsv进行SV检测</span></li></ul></li><li><p><span>BWA方法：</span></p><ul><li><span>利用bwa进行短序列比对</span></li><li><span>通过samtools进行处理</span></li><li><span>通过bcftools进行变异检测</span></li></ul></li></ul><p><img src="img\006_生物信息快速入门\215.png" alt="215" style="zoom:33%;" /></p><p><img src="img\006_生物信息快速入门\216.png" alt="216" style="zoom:50%;" /></p><ul><li><p><span>InDel检测：</span></p><ul><li><span>Pindel</span></li><li><span>Dindel</span></li></ul></li><li><p><span>其余软件：</span></p><ul><li><span>breakdancer</span>
+<span>cnvnator</span></li><li><span>SSAHA2</span></li><li><span>maq</span></li></ul></li><li><p><span>结果处理与验证：</span></p><ul><li><span>过虑掉落在重复区域的变异</span></li><li><span>去除reads支持数为1的低频突变</span></li><li><span>支持SNP的reads质量值大于Q20</span></li><li><span>SNP位点附近3bp内没有另外的SNP</span></li><li><span>SNP的覆盖度要大于3</span></li><li><span>在任意连续的10bp中不超过3个SNP</span></li><li><span>去除趋同进化的SNP等</span></li></ul></li></ul><figure><table><thead><tr><th><img src="img\006_生物信息快速入门\217.png" referrerpolicy="no-referrer" alt="217"></th><th><img src="img\006_生物信息快速入门\218.png" referrerpolicy="no-referrer" alt="218"></th></tr></thead><tbody></tbody></table></figure><h2 id='系统发育树构建'><span>系统发育树构建</span></h2><ul><li><p><span>进化树分为分子树与系统发育树。分子树是依据分子数据构建的反映分子系统发育的树。系统发育树 就是描述这一群有机体发生或进化顺序的拓朴结构。</span></p></li><li><p><span>构建系统发育树方法：</span></p><ul><li><span>序列类似性比较，主要是基于氨基酸相对突变率矩阵，例如PAM250矩阵，计算不同序列差异性积分作为它们的差异性量度</span></li><li><span>通过蛋白质结构比较包括刚体结构叠合和多结构特征比较等方法建立结构进化树。</span></li></ul></li><li><p><span>多序列比对构建系统发育树：</span></p><ul><li><span>coregene</span></li><li><span>MLST</span></li><li><span>MLVA</span></li><li><span>全基因组SNP</span></li></ul></li><li><p><span>Coregene与SNP方法比较：</span></p><ul><li><span>coregene 包括SNP与InDel的差异，但是不包括基因间区</span></li><li><span>全基因组SNP包含基因组与间区SNP变化，但是不包括插入与缺失信息</span></li></ul></li></ul><p><img src="img\006_生物信息快速入门\219.png" alt="219" style="zoom:50%;" /></p><ul><li><p><span>构建系统发育树的常用方法：</span></p><ul><li><span>独立元素法：所谓独立元素法是指进化树的拓扑形状是由序列上的每个碱基/氨基酸的状态决定的。最大简约性法(Maximum Parsimony methods)和最大可能性法(Maximum Likelihood methods )</span></li><li><span>距离依靠法：而距离依靠法是指进化树的拓扑形状由两两序列的进化距离决定的。除权配对法(UPGMAM)和邻位相连法(Neighbor-joining )。</span></li></ul></li><li><p><span>系统发育树评估：Bootstrap，即自展值，是用来检验计算的进化树分支可信度的。简单地讲就是把序列的位点都重排，重排后的序列再用相同的办法构树，如果原来树的分枝在重排后构的树中也出现了，就给这个分枝打上一分如果没出现就给0分，这样经过你给定的repetitions次(至少1000次)重排构树打分后，每个分枝就都得出分值，计算机会给你换算成bootstrap values值。</span></p></li><li><p><span>Bootstrap values 即步长值，是指在你选择的遗传距离算法中软件根据所比对序列得到结果比如 bootstrap value设置为1000，即软件构建了，在每个节点上显示的bootstrap value 即指在这相应的1000”棵树1000次建树过程中，有相应的次数的频率这个分枝内的几株菌或几段序列在进化速度上相似。</span></p></li></ul><p><img src="img\006_生物信息快速入门\220.png" alt="220" style="zoom:50%;" /></p><h2 id='高通量数据分析faq'><span>高通量数据分析FAQ</span></h2><ul><li><p><span>硬件计算资源的问题：数据量大，数据分析对硬件资源消耗大。</span></p></li><li><p><span>标准问题：软件过多，输入输出文件格式不统一。</span></p></li><li><p><span>误差与错误：</span></p><ul><li><span>软件选项参数设置的影响</span></li><li><span>超出软件的适用范围</span></li></ul></li></ul><p><img src="img\006_生物信息快速入门\221.png" alt="221" style="zoom:50%;" /></p><p><img src="img\006_生物信息快速入门\222.png" alt="222" style="zoom:50%;" /></p><h2 id='数据下载'><span>数据下载</span></h2><ul><li><span>生物信息相关软件的下载网站：</span><a href='https://mybiosoftware.com/' target='_blank' class='url'>https://mybiosoftware.com/</a></li><li><span>NCBI下载。</span></li><li><span>通过FTP下载：ftp://ftp.ncbi.nlm.nih.gov</span></li><li><span>批量下载：Batch Entrez。</span></li></ul><p><img src="img\006_生物信息快速入门\223.png" alt="223" style="zoom:50%;" /></p><figure><table><thead><tr><th><span>扩展名</span></th><th><span>描述</span></th></tr></thead><tbody><tr><td><span>.asn</span></td><td><span>asn.1格式的基因组记录</span></td></tr><tr><td><span>.faa</span></td><td><span>fasta格式的蛋白质序列，文本文件</span></td></tr><tr><td><span>.ffn</span></td><td><span>基因组片段的蛋白质编码部分</span></td></tr><tr><td><span>.fna</span></td><td><span>基因组fasta序列</span></td></tr><tr><td><span>.frn</span></td><td><span>基因组片段的rna编码部分</span></td></tr><tr><td><span>.gbk</span></td><td><span>genbank文件格式的基因组</span></td></tr><tr><td><span>.gff</span></td><td><span>基因组特征</span></td></tr><tr><td><span>.ptt</span></td><td><span>蛋白质表格</span></td></tr><tr><td><span>.rnt</span></td><td><span>RNA表格</span></td></tr><tr><td><span>.rpt</span></td><td><span>总结报告</span></td></tr></tbody></table></figure><p><img src="img\006_生物信息快速入门\224.png" alt="224" style="zoom:50%;" /></p><h2 id='ncbi数据上传'><span>NCBI数据上传</span></h2><ul><li><p><span>上传工具：</span></p><ul><li><span>Banklt：小数据在线提交</span></li><li><span>Sequin：本地软件</span></li></ul></li></ul><p><img src="img\006_生物信息快速入门\225.png" alt="225" style="zoom: 50%;" /></p><h2 id='配套服务器的使用教程'><span>配套服务器的使用教程</span></h2></div></div>
+</body>
+</html>
